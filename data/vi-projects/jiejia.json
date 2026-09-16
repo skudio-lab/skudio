@@ -1,0 +1,86 @@
+{
+  "slug": "jiejia",
+  "sequence": "01",
+  "title": "揭家牛肉麵",
+  "hero": {
+    "image": "jiejia_hero.png"
+  },
+  "overview": {
+    "company": "新竹正揭家牛肉麵",
+    "category": "Food & Restaurant",
+    "year": "2023",
+    "role": [
+      "Logo Design",
+      "Visual Identity"
+    ]
+  },
+  "brief": [
+    {
+      "title": "案件由來",
+      "content": "在新竹飄香一甲子的揭家牛肉麵，透過這次 LOGO 重新設計，為六十年的老店風味留下新的識別。"
+    },
+    {
+      "title": "品牌需求",
+      "content": "以民國 40～50 年代的復古韻味為方向，讓標誌帶著老店的年代感。註冊名稱為「新竹正揭家牛肉麵」。"
+    },
+    {
+      "title": "設計方向",
+      "content": "以毛筆草書作為 LOGO TYPE 的主體，結合民國初期的筆墨氣息與印鑑意象，將老店的歷史感收進字形與構圖。原提案的專利申請方向，著重圖像與排版的組合，而非僅以「新竹正揭家牛肉麵」文字名稱申請。"
+    }
+  ],
+  "development": [
+    {
+      "image": "jiejia_01.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    },
+    {
+      "image": "jiejia_02.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    },
+    {
+      "image": "jiejia_03.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    },
+    {
+      "image": "jiejia_04.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    }
+  ],
+  "finalLogo": {
+    "image": "jiejia_04.png"
+  },
+  "applications": [
+    {
+      "ratio": "original",
+      "width": "half",
+      "image": "jiejia_a2.jpg",
+      "title": "",
+      "description": "",
+      "visible": true
+    },
+    {
+      "ratio": "original",
+      "width": "full",
+      "image": "jiejia_a1.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    },
+    {
+      "image": "jiejia_a3.png",
+      "title": "",
+      "description": "",
+      "visible": true,
+      "ratio": "original",
+      "width": "full"
+    }
+  ]
+}

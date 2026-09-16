@@ -1,0 +1,90 @@
+{
+  "project": {
+    "sequence": "01",
+    "title": "SOP Editor",
+    "category": "Knowledge & Workflow",
+    "year": "2026",
+    "role": "Concept / UI Design / Development"
+  },
+  "hero": {
+    "image": "../assets/images/ai/sop-editor-hero.jpeg",
+    "statement": "把做過的事，好好留下來。讓分散的操作經驗，成為下一個人接得住的 SOP。"
+  },
+  "challenge": {
+    "title": "經驗有了，交接還需要一條清楚的路",
+    "description": "一套熟悉的操作，往往分散在文件、截圖與資料夾裡。每次更新、查找或交接，都得重新拼湊；希望把這段整理的時間省下來。"
+  },
+  "solution": {
+    "title": "把步驟與資料放回同一個專案",
+    "description": "以圖像化 SOP 串起操作步驟、圖片標註、物料與相關文件，保存為可讀取的結構化專案，讓經驗有清楚的脈絡。",
+    "image": "../assets/images/ai/sop_2-1.jpg",
+    "ratio": "auto"
+  },
+  "features": [
+    {
+      "number": "01",
+      "title": "Visual Step Editor",
+      "description": "用圖片、文字與標記，將每一步操作交代清楚。",
+      "image": "../assets/images/ai/sop_3-1.jpg",
+      "imageLabel": "STEP EDITOR · 1600 × 900 px",
+      "ratio": "auto",
+      "layout": "full"
+    },
+    {
+      "number": "02",
+      "title": "Image Annotation",
+      "description": "在參考圖片上建立、移動與縮放標記，讓需要留意的位置更明確。",
+      "image": "../assets/images/ai/sop_3-2.jpg",
+      "imageLabel": "ANNOTATION · 1200 × 1200 px",
+      "ratio": "auto",
+      "layout": "half"
+    },
+    {
+      "number": "03",
+      "title": "Documents & Materials",
+      "description": "物料編號、表單與工作範本隨步驟一起保存，查閱時也能找到相關資料。",
+      "image": "../assets/images/ai/sop_3-3.jpg",
+      "imageLabel": "DOCUMENTS · 1200 × 1200 px",
+      "ratio": "auto",
+      "layout": "half"
+    }
+  ],
+  "results": [
+    {
+      "value": "13+",
+      "title": "實際流程",
+      "description": "已整理行政、PLM 與 RD 類標準作業流程，將日常操作逐步留下紀錄。"
+    },
+    {
+      "value": "",
+      "title": "降低資料遺漏",
+      "description": "圖片、附件與操作說明放在同一個專案，減少分散保存帶來的遺漏。"
+    },
+    {
+      "value": "",
+      "title": "方便交接",
+      "description": "以一致格式保存步驟、位置與文件關聯，讓接手的人循著脈絡理解工作。"
+    },
+    {
+      "value": "JSON",
+      "title": "結構化知識",
+      "description": "以 JSON 保存資料，為後續搜尋、整理與知識庫應用留下基礎。"
+    }
+  ],
+  "application": {
+    "enabled": true,
+    "label": "Open Application",
+    "url": "../apps/sop-editor/index.html",
+    "openInNewTab": true
+  },
+  "navigation": {
+    "previous": {
+      "title": "Packaging Assistant",
+      "url": "ai-packaging-assistant.html"
+    },
+    "next": {
+      "title": "Project Planner",
+      "url": "ai-project-planner.html"
+    }
+  }
+}

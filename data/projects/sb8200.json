@@ -1,0 +1,201 @@
+{
+  "slug": "sb8200",
+  "sequence": "03",
+  "title": "SB8200 Mondem",
+  "brand": "CBN",
+  "hero": {
+    "image": "SB8200_hero.png",
+    "alt": "SB8200 產品主視覺"
+  },
+  "overview": {
+    "company": "CBN ODM CommScope ARRIS",
+    "category": "Networking / Docsis 3.1 Cable Modem",
+    "year": "2023",
+    "role": [
+      "工業設計",
+      "包材設計"
+    ],
+    "size": {
+      "length": 137.9,
+      "width": 44,
+      "height": 136.45,
+      "unit": "mm"
+    }
+  },
+  "brief": [
+    {
+      "title": "案件由來",
+      "content": "因應 ARRIS 尋求 second source，CBN 團隊承接提案與量產，在既有產品的基礎上展開設計調整。"
+    },
+    {
+      "title": "產品定位",
+      "content": "維持市售產品熟悉的外觀，是這次調整的起點。設計變更與迭代圍繞 COST DOWN 展開，在延續辨識度的同時回應量產成本。"
+    },
+    {
+      "title": "外觀需求",
+      "content": "外觀延續 MOTO 時期的風格，配合不同系統廠商的研發尺寸調整機身，並規劃 COST DOWN 的色彩方案。產品無 wi-fi 功能、功率較低，無須考量被動式散熱。"
+    },
+    {
+      "title": "CMF 需求",
+      "content": "保留市售版本鏡面與亞面的配置，減少絲印顏色數量，從既有表面細節中尋找 COST DOWN 的空間。"
+    }
+  ],
+  "gallery": [
+    {
+      "title": "Front View",
+      "image": "SB8200_F.png",
+      "alt": "SB8200 Front View",
+      "description": "",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "title": "Real View",
+      "image": "SB8200_R.png",
+      "alt": "SB8200 Real View",
+      "description": "",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "title": "吊掛孔設計",
+      "image": "sb8200_d1.png",
+      "alt": "SB8200 散熱孔設計",
+      "description": "將吊掛孔藏進外觀結構，保留安裝功能，也維持機身線條的完整。",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    }
+  ],
+  "cmf": {
+    "visible": true,
+    "explodedImage": {
+      "image": "SB8200_explode.png",
+      "alt": "SB8200 產品爆炸圖"
+    },
+    "parts": [
+      {
+        "name": "Left Cover",
+        "colorPlan": "White",
+        "material": "ABS",
+        "finish": {
+          "main": "MT-11010",
+          "local": "SPI-A1"
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#ffffff",
+          "end": "#f2f1ed",
+          "angle": 90
+        },
+        "position": {
+          "x": 10.57,
+          "y": 33.55
+        },
+        "visible": true
+      },
+      {
+        "name": "Front Mylar",
+        "colorPlan": "referance Artwork for 4 step printed",
+        "material": "PC",
+        "finish": {
+          "main": "SPI-A1",
+          "local": ""
+        },
+        "swatch": {
+          "type": "gradient",
+          "start": "#f5f7f7",
+          "end": "#c9d2d4",
+          "angle": 135
+        },
+        "position": {
+          "x": 71.84,
+          "y": 60.03
+        },
+        "visible": true
+      },
+      {
+        "name": "Rubber Feet",
+        "colorPlan": "Black",
+        "material": "Silicone",
+        "finish": {
+          "main": "Natural Finish",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#111111",
+          "end": "#111111",
+          "angle": 90
+        },
+        "position": {
+          "x": 48.52,
+          "y": 79.98
+        },
+        "visible": true
+      },
+      {
+        "name": "Right Cover",
+        "colorPlan": "White",
+        "material": "ABS",
+        "finish": {
+          "main": "MT-11010",
+          "local": "SPI-A1"
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#ffffff",
+          "end": "#f2f1ed",
+          "angle": 90
+        },
+        "position": {
+          "x": 76.47,
+          "y": 9.97
+        },
+        "visible": true
+      },
+      {
+        "name": "I/O Mylar",
+        "colorPlan": "referance Artwork. Printed.",
+        "material": "Mylar",
+        "finish": {
+          "main": "Print",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#111111",
+          "end": "#111111",
+          "angle": 90
+        },
+        "position": {
+          "x": 33.96,
+          "y": 15.9
+        },
+        "visible": true
+      },
+      {
+        "name": "LED MASK",
+        "colorPlan": "Black",
+        "material": "Silicone",
+        "finish": {
+          "main": "Natural Finish",
+          "local": ""
+        },
+        "visible": true,
+        "swatch": {
+          "type": "solid",
+          "start": "#000000",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 52.12,
+          "y": 43.46
+        }
+      }
+    ]
+  }
+}

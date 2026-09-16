@@ -1,0 +1,224 @@
+{
+  "slug": "mf4322",
+  "sequence": "01",
+  "title": "MF4322 Packaging",
+  "hero": {
+    "image": "mf4322_hero.png",
+    "summary": "以蜂巢包減少內盒用量，讓 MF4322 的包裝回應工程師的使用需要。從紙張保護、隔板配置到標籤與工程圖面，逐步落實 Cost Down 的考量。"
+  },
+  "overview": {
+    "company": "Compal Broadband Networks",
+    "brand": "LGI",
+    "year": "2024",
+    "role": [
+      "Packaging Design",
+      "Packaging Engineering"
+    ]
+  },
+  "brief": {
+    "ista": "1A",
+    "weight": "Carton < 10 kg",
+    "markets": "EU",
+    "productSize": "L:132 mm W:43 mm H:142 mm",
+    "accessories": "none,adpter由供應商直出,Quick Guide電子瀏覽",
+    "priority": "Cost Down "
+  },
+  "components": {
+    "visible": true,
+    "image": "mf4322_explode.png",
+    "items": [
+      {
+        "name": "Card Board",
+        "description": "",
+        "material": "AB/F, 12kgf",
+        "quantity": "2/6",
+        "size": "L : 247, W : 408",
+        "position": {
+          "x": 39.797501228676516,
+          "y": 14.207063178198986
+        },
+        "visible": true,
+        "label": {
+          "enabled": false,
+          "adhesive": "",
+          "regulations": ""
+        }
+      },
+      {
+        "name": "Partition B",
+        "description": "",
+        "material": "AB/F, 12 kgf",
+        "quantity": "7/6",
+        "size": "L : 136, W : 247",
+        "position": {
+          "x": 40.74449869998097,
+          "y": 38.97970687711387
+        },
+        "visible": true,
+        "label": {
+          "enabled": false,
+          "adhesive": "",
+          "regulations": ""
+        }
+      },
+      {
+        "name": "Partition A",
+        "description": "",
+        "material": "AB/F, 12 kgf",
+        "quantity": "2/6",
+        "size": "L : 408, W : 136",
+        "position": {
+          "x": 40.67685956227408,
+          "y": 52.44832586140079
+        },
+        "visible": true,
+        "label": {
+          "enabled": false,
+          "adhesive": "",
+          "regulations": ""
+        }
+      },
+      {
+        "name": "Carton",
+        "description": "",
+        "material": "AB/F, 12 kgf",
+        "quantity": "1/6",
+        "size": "L : 418, W : 257, H : 170",
+        "position": {
+          "x": 39.391641630731186,
+          "y": 73.4930495613726
+        },
+        "label": {
+          "enabled": false,
+          "adhesive": "",
+          "regulations": ""
+        },
+        "visible": true
+      },
+      {
+        "name": "Warning Sticker",
+        "description": "",
+        "material": "Eggshell Sticker",
+        "quantity": "1",
+        "size": "L : 8, W : 8",
+        "position": {
+          "x": 47.84704166402435,
+          "y": 28.757987554608228
+        },
+        "label": {
+          "enabled": true,
+          "adhesive": "Acrylic",
+          "regulations": "RoHS"
+        },
+        "visible": true
+      },
+      {
+        "name": "Chassis Label",
+        "description": "",
+        "material": "50# TOP COTAED WHITE PET",
+        "quantity": "1",
+        "size": "L : 39, W : 84",
+        "position": {
+          "x": 60.56397986159554,
+          "y": 23.94776216354284
+        },
+        "label": {
+          "enabled": true,
+          "adhesive": "Acrylic",
+          "regulations": "RoHS,CE,UKCA"
+        },
+        "visible": true
+      },
+      {
+        "name": "Sleeve",
+        "description": "",
+        "material": "Moisture-Proof Paper",
+        "quantity": "1",
+        "size": "L : 135, W : 400",
+        "position": {
+          "x": 57.85825333724396,
+          "y": 38.25817361894025
+        },
+        "label": {
+          "enabled": false,
+          "adhesive": "",
+          "regulations": ""
+        },
+        "visible": true
+      },
+      {
+        "name": "Seal Sticker",
+        "description": "",
+        "material": "Art Paper",
+        "quantity": "1",
+        "size": "L : 30, W : 10",
+        "position": {
+          "x": 61.57862885645887,
+          "y": 38.25817637137119
+        },
+        "label": {
+          "enabled": true,
+          "adhesive": "Acrylic",
+          "regulations": "RoHS"
+        },
+        "visible": true
+      },
+      {
+        "name": "Carton Label & Pallet Label (Share)",
+        "description": "",
+        "material": "Art Paper",
+        "quantity": "1/6 + 1/5040",
+        "size": "L : 150, W : 100",
+        "position": {
+          "x": 53.39379775984526,
+          "y": 88.16422489342587
+        },
+        "label": {
+          "enabled": true,
+          "adhesive": "Rubber",
+          "regulations": "RoHS,CE,UKCA"
+        },
+        "visible": true
+      }
+    ]
+  },
+  "labels": {
+    "visible": true,
+    "overviewPdf": "mf4322_l.pdf"
+  },
+  "deliverables": {
+    "visible": true,
+    "items": [
+      {
+        "title": "Label Proposal",
+        "pdf": "Label_Proposal.pdf",
+        "visible": true
+      },
+      {
+        "title": "Carton Quotation Drawing",
+        "pdf": "MF4322_CARTON_QUOTATION.pdf",
+        "visible": true
+      },
+      {
+        "title": "Partition A Quotation Drawing",
+        "pdf": "MF4322_PARTITION_A_QUOTATION.pdf",
+        "visible": true
+      },
+      {
+        "title": "Partition B Quotation Drawing",
+        "pdf": "MF4322_PARTITION_B_QUOTATION.pdf",
+        "visible": true
+      },
+      {
+        "title": "Board Quotation",
+        "pdf": "MF4322_CARTON_BOARD_QUOTATION.pdf",
+        "visible": true
+      },
+      {
+        "title": "PE Drawing",
+        "pdf": "MF4322_PE.pdf",
+        "visible": true
+      }
+    ]
+  }
+}

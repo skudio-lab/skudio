@@ -1,0 +1,99 @@
+{
+  "project": {
+    "sequence": "05",
+    "title": "Barcode Atelier",
+    "category": "Document & Label Utility",
+    "year": "2026",
+    "role": "Concept / UI Design / Development"
+  },
+  "hero": {
+    "image": "../assets/images/ai/barcode-atelier-hero.jpeg",
+    "statement": "從一張名片到一枚商品標籤，把常用的 QR Code 與條碼，放進自己的離線工作室。"
+  },
+  "challenge": {
+    "title": "小小的條碼，也有來回切換的麻煩",
+    "description": "不同用途的 QR Code 與條碼，常得切換幾個網站才能完成。輸出品質與尺寸也要反覆確認，因此將常用模式整理在一起。"
+  },
+  "solution": {
+    "title": "在同一工作區完成向量條碼",
+    "description": "集中建立 vCard QR Code、Code 128 與 EAN，並調整尺寸、樣式及 SVG 匯出，讓條碼接上後續的設計工作。",
+    "image": "../assets/images/ai/code_02-1.jpg",
+    "ratio": "auto"
+  },
+  "features": [
+    {
+      "number": "01",
+      "title": "vCard QR Code",
+      "description": "輸入聯絡資料，製作可分享的名片 QR Code。",
+      "image": "../assets/images/ai/code_03-1.jpg",
+      "imageLabel": "VCARD QR · 1600 × 900 px",
+      "ratio": "auto",
+      "layout": "full"
+    },
+    {
+      "number": "02",
+      "title": "Code 128",
+      "description": "以 Code 128 製作物流、資產與內部識別所需的條碼。",
+      "image": "../assets/images/ai/code_03-2.jpg",
+      "imageLabel": "CODE 128 · 1200 × 1200 px",
+      "ratio": "auto",
+      "layout": "half"
+    },
+    {
+      "number": "03",
+      "title": "EAN Product Code",
+      "description": "依商品條碼需求，產生 EAN-8 或 EAN-13。",
+      "image": "../assets/images/ai/code_03-3.jpg",
+      "imageLabel": "EAN CODE · 1200 × 1200 px",
+      "ratio": "auto",
+      "layout": "half"
+    },
+    {
+      "number": "04",
+      "title": "Vector SVG Output",
+      "description": "匯出可縮放的 SVG，接續放入標籤與包材 artwork。",
+      "image": "../assets/images/ai/code_03-4.jpg",
+      "imageLabel": "SVG OUTPUT · 1600 × 900 px",
+      "ratio": "auto",
+      "layout": "full"
+    }
+  ],
+  "results": [
+    {
+      "value": "3",
+      "title": "條碼模式",
+      "description": "在同一工具中使用 vCard QR、Code 128 與 EAN。"
+    },
+    {
+      "value": "SVG",
+      "title": "向量輸出",
+      "description": "以 SVG 銜接標籤、包材與設計稿的後續編輯。"
+    },
+    {
+      "value": "",
+      "title": "離線使用",
+      "description": "聯絡與產品資訊在本機處理，不需上傳。"
+    },
+    {
+      "value": "",
+      "title": "快速切換",
+      "description": "依用途切換條碼模式，延續同一個工作流程。"
+    }
+  ],
+  "application": {
+    "enabled": true,
+    "label": "Open Application",
+    "url": "../apps/barcode-atelier/index.html",
+    "openInNewTab": true
+  },
+  "navigation": {
+    "previous": {
+      "title": "Render Gallery",
+      "url": "ai-render-gallery.html"
+    },
+    "next": {
+      "title": "Packaging Assistant",
+      "url": "ai-packaging-assistant.html"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "slug": "ins3",
+  "sequence": "10",
+  "title": "INS3",
+  "brand": "Tekspring",
+  "hero": {
+    "image": "ins3_hero_v1.png"
+  },
+  "overview": {
+    "company": "Tekspring",
+    "category": "Document Camera",
+    "year": "",
+    "role": [
+      "工業設計"
+    ],
+    "size": {
+      "length": "",
+      "width": "",
+      "height": "",
+      "unit": "mm"
+    }
+  },
+  "brief": [
+    {
+      "title": "產品呈現",
+      "content": "以可調整支臂搭配桌上型底座，呈現文件與繪畫拍攝的使用方式。"
+    },
+    {
+      "title": "造型重點",
+      "content": "以白色機身整合底座、支臂與鏡頭，紅色按鍵集中於鏡頭端，形成清楚的操作辨識。"
+    }
+  ],
+  "gallery": [
+    {
+      "image": "ins-3.164.png",
+      "title": "整體造型",
+      "description": "圓角底座搭配細長支臂，將鏡頭與操作按鍵集中在前端。",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "image": "ins-3_pose_close_1.3.png",
+      "title": "主機拆卸與獨立使用",
+      "description": "主機可從支臂拆卸，獨立使用，靈活調整拍攝位置與角度。",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "image": "ins-3_pose_close.152.png",
+      "title": "收折姿態",
+      "description": "鏡頭與支臂向底座收合，呈現收納時的輪廓。",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "image": "ins-3_pose_20cm.158.png",
+      "title": "鏡頭與走線",
+      "description": "線材沿支臂配置，保留關節轉折處的活動空間。",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "image": "ins-3_sketch_recorded.png",
+      "title": "繪畫使用情境",
+      "description": "以桌面素描情境呈現鏡頭與被拍攝物件的相對位置。",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    }
+  ],
+  "cmf": {
+    "visible": false,
+    "explodedImage": {
+      "image": ""
+    },
+    "parts": []
+  }
+}

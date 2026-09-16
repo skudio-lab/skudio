@@ -1,0 +1,257 @@
+{
+  "slug": "mf4322",
+  "sequence": "04",
+  "title": "MF4322",
+  "brand": "CBN",
+  "hero": {
+    "image": "MF4322_hero.png",
+    "alt": "MF4322 產品主視覺"
+  },
+  "overview": {
+    "company": "CBN ODM LGI",
+    "category": "Networking / MBU",
+    "year": "2023",
+    "role": [
+      "工業設計",
+      "包材設計"
+    ],
+    "size": {
+      "length": 132.2,
+      "width": 43,
+      "height": 141.5,
+      "unit": "mm"
+    }
+  },
+  "brief": [
+    {
+      "title": "案件由來",
+      "content": "為 LGI 的 MBU 開發案設計外觀，以 CBN BRANDING 為基礎，推敲小型網通裝置的樣貌。"
+    },
+    {
+      "title": "產品定位",
+      "content": "這是一款供 ISP 業者進行網路工程使用的小型裝置，無被動散熱需求；小巧的尺寸，也為外觀與寄送方式留下了不同的可能。"
+    },
+    {
+      "title": "外觀需求",
+      "content": "客戶希望收到產品時，就像收到一封信。外觀因此朝書本般的形體發展，配合可裝入信封、實際郵寄的要求；機身僅保留單一 LED 燈，不使用多顆狀態燈。"
+    },
+    {
+      "title": "CMF 需求",
+      "content": "黑色外殼搭配細咬花，以簡潔的色彩與表面紋理，呈現小型機身的輪廓。"
+    }
+  ],
+  "gallery": [
+    {
+      "title": "Front View",
+      "image": "MF4322_F.png",
+      "alt": "MF4322 Front View",
+      "description": "",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "title": "Real View",
+      "image": "MF4322_R.png",
+      "alt": "MF4322 Real View",
+      "description": "",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "image": "MF4322_d1.PNG",
+      "title": "波浪造型",
+      "description": "波浪沿側身環繞，讓光影停留在起伏之間，帶出小型機身的立體層次。",
+      "alt": "",
+      "ratio": "1:1",
+      "width": "full",
+      "visible": true
+    },
+    {
+      "image": "MF4322_d2.PNG",
+      "title": "LED情境燈",
+      "description": "將多顆指示燈收斂為單一 LED，以燈光顏色傳達機台狀態，讓外觀更簡潔。",
+      "alt": "",
+      "ratio": "1:1",
+      "width": "full",
+      "visible": true
+    },
+    {
+      "image": "MF4322_QIG.PNG",
+      "title": "MBU的使用說明",
+      "description": "當 WAN 斷線時，裝置緊急切換至 MBU，透過 SIM 卡與天線接續傳輸。",
+      "alt": "",
+      "ratio": "original",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "image": "MF4322_PKG2.PNG",
+      "title": "歐盟禁塑令提案",
+      "description": "以紙張取代 PE 袋，隔開產品與瓦楞紙，避免表面直接摩擦。",
+      "alt": "",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "image": "MF4322_pkg1.PNG",
+      "title": "包材組裝提案",
+      "description": "以蜂巢包供工程師使用，減少內盒用量，從包裝組裝方式著手達到 COST DOWN 效果。",
+      "alt": "",
+      "ratio": "original",
+      "width": "full",
+      "visible": true
+    }
+  ],
+  "cmf": {
+    "visible": true,
+    "explodedImage": {
+      "image": "MF4322_explode.png",
+      "alt": "MF4322 產品爆炸圖"
+    },
+    "parts": [
+      {
+        "name": "Left Cover",
+        "colorPlan": "NCS S 9000-N",
+        "material": "PCR 95% PC",
+        "finish": {
+          "main": "MT-1055-3",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#111111",
+          "end": "#111111",
+          "angle": 90
+        },
+        "position": {
+          "x": 6.15,
+          "y": 14.45
+        },
+        "visible": true
+      },
+      {
+        "name": "Front Cover",
+        "colorPlan": "NCS S 9000-N",
+        "material": "PCR 95% PC",
+        "finish": {
+          "main": "MT-1055-3",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#111111",
+          "end": "#111111",
+          "angle": 90
+        },
+        "position": {
+          "x": 24.65,
+          "y": 31.62
+        },
+        "visible": true
+      },
+      {
+        "name": "Right Cover",
+        "colorPlan": "NCS S 9000-N",
+        "material": "PCR 95% PC",
+        "finish": {
+          "main": "MT-1055-3",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#111111",
+          "end": "#111111",
+          "angle": 90
+        },
+        "position": {
+          "x": 91.77,
+          "y": 25.81
+        },
+        "visible": true
+      },
+      {
+        "name": "Push Button",
+        "colorPlan": "NCS S 9000-N",
+        "material": "PCR 95% PC",
+        "finish": {
+          "main": "MT-1055-3",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#111111",
+          "end": "#111111",
+          "angle": 90
+        },
+        "position": {
+          "x": 60.87,
+          "y": 34.64
+        },
+        "visible": true
+      },
+      {
+        "name": "Light Pipe",
+        "colorPlan": "N/A",
+        "material": "Translucent PC",
+        "finish": {
+          "main": "MT-11015",
+          "local": ""
+        },
+        "swatch": {
+          "type": "gradient",
+          "start": "#f5f7f7",
+          "end": "#c9d2d4",
+          "angle": 135
+        },
+        "position": {
+          "x": 36.28,
+          "y": 75.74
+        },
+        "visible": true
+      },
+      {
+        "name": "Rubber Feet",
+        "colorPlan": "Black",
+        "material": "Silicone",
+        "finish": {
+          "main": "Natural Finish",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#111111",
+          "end": "#111111",
+          "angle": 90
+        },
+        "position": {
+          "x": 57.56,
+          "y": 67.76
+        },
+        "visible": true
+      },
+      {
+        "name": "Top Cover",
+        "colorPlan": "NCS S 9000-N",
+        "material": "PCR 95% PC",
+        "finish": {
+          "main": "MT-1055-3",
+          "local": ""
+        },
+        "visible": true,
+        "swatch": {
+          "type": "solid",
+          "start": "#000000",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 57.01,
+          "y": 14.59
+        }
+      }
+    ]
+  }
+}

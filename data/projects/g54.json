@@ -1,0 +1,251 @@
+{
+  "slug": "g54",
+  "sequence": "01",
+  "title": "G54 Modem ",
+  "brand": "CBN",
+  "hero": {
+    "image": "G54_hero.png",
+    "alt": "G54 Wi-Fi 7 Modem & Router 產品主視覺"
+  },
+  "overview": {
+    "company": "CBN ODM CommScope ARRIS",
+    "category": "Networking / Docsis 3.1 + Wi-Fi 7 Modem & Router",
+    "year": "2023",
+    "role": [
+      "工業設計",
+      "包材設計",
+      "熱流模擬支援"
+    ],
+    "size": {
+      "length": 230,
+      "width": 76,
+      "height": 300,
+      "unit": "mm"
+    }
+  },
+  "brief": [
+    {
+      "title": "案件由來",
+      "content": "在既有機種的基礎上，為新版 PCBA 重新安排外觀與尺寸。這次由 ARRIS 工業設計團隊委託 ODM 團隊調整，從機身比例到重新規劃的底座結構，逐步推敲新的造型方案。"
+    },
+    {
+      "title": "產品定位",
+      "content": "作為零售市場的旗艦級 Gateway，G54 延續 ARRIS 的品牌辨識度，以穩定的量體與精緻細節，回應高效能網通設備的定位。"
+    },
+    {
+      "title": "外觀需求",
+      "content": "機身比例隨新版內部配置調整，同時保留 ARRIS 的設計語彙。外殼的每一道開孔，也要在進、排氣效率與整體造型之間找到合適的位置。"
+    },
+    {
+      "title": "CMF 需求",
+      "content": "跳色底座襯出黑色機身，腰帶以 SPI-A1 高光表面帶出層次。色彩依 RAL 系統定義，主要接觸面則選用細緻咬花，兼顧視覺對比與降低指紋殘留。"
+    }
+  ],
+  "gallery": [
+    {
+      "title": "Front View",
+      "image": "G54_arris_fr.2544.png",
+      "alt": "G54 正面視圖",
+      "description": "",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "title": "Real View",
+      "image": "G54_arris_fr.2545.png",
+      "alt": "G54 實際產品視圖",
+      "description": "",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "title": "散熱孔設計",
+      "image": "G54_arris_detial.352.png",
+      "alt": "G54 產品細節",
+      "description": "三道遞減的 V 形紋路，將水波意象帶進散熱結構。開孔的尺寸與排列，逐一兼顧外觀完整性、結構強度與進氣效率。",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "image": "G54_arris_detial.351.png",
+      "title": "LED 弧線設計",
+      "description": "LED 燈帶沿 ARRIS 標誌性的腰帶弧線延伸。光線順著機身轉折流動，在勾勒輪廓的同時，也傳達產品狀態。",
+      "alt": "G54 腰帶與 LED 燈光細節",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    }
+  ],
+  "cmf": {
+    "visible": true,
+    "explodedImage": {
+      "image": "G54_explode.348.png",
+      "alt": "G54 產品爆炸圖"
+    },
+    "parts": [
+      {
+        "name": "Left Cover",
+        "colorPlan": "RAL 9005",
+        "material": "ABS",
+        "finish": {
+          "main": "MT-11015",
+          "local": "SPI-A1"
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#000000",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 21.79,
+          "y": 36.84
+        },
+        "visible": true
+      },
+      {
+        "name": "Front Cover",
+        "colorPlan": "RAL 9005",
+        "material": "ABS",
+        "finish": {
+          "main": "MT-11015 + Screen Printed PMS Cool Gray 2C",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#000000",
+          "end": "#77736d",
+          "angle": 90
+        },
+        "position": {
+          "x": 39.47,
+          "y": 51.02
+        },
+        "visible": true
+      },
+      {
+        "name": "Light Pipe",
+        "colorPlan": "N/A",
+        "material": "Translucent PC",
+        "finish": {
+          "main": "MT-11015",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#c7c7c7",
+          "end": "#99958d",
+          "angle": 135
+        },
+        "position": {
+          "x": 38.45,
+          "y": 73.23
+        },
+        "visible": true
+      },
+      {
+        "name": "Top Cover",
+        "colorPlan": "RAL 9005",
+        "material": "ABS",
+        "finish": {
+          "main": "MT-11015",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#000000",
+          "end": "#222222",
+          "angle": 90
+        },
+        "position": {
+          "x": 57.29,
+          "y": 14.84
+        },
+        "visible": true
+      },
+      {
+        "name": "Right Cover",
+        "colorPlan": "RAL 9005",
+        "material": "ABS",
+        "finish": {
+          "main": "MT-11015 + Screen Printed PMS Cool Gray 2C",
+          "local": "SPI-A1"
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#000000",
+          "end": "#c6c0b7",
+          "angle": 90
+        },
+        "position": {
+          "x": 77.96,
+          "y": 33.46
+        },
+        "visible": true
+      },
+      {
+        "name": "Bottom Cover",
+        "colorPlan": "RAL 9005",
+        "material": "ABS",
+        "finish": {
+          "main": "MT-11015",
+          "local": "SPI-A1"
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#000000",
+          "end": "#9f2f18",
+          "angle": 90
+        },
+        "position": {
+          "x": 43.42,
+          "y": 89.92
+        },
+        "visible": true
+      },
+      {
+        "name": "Base Cover",
+        "colorPlan": "仿金屬質感 ( * 塑膠原料 RAL 9018 禁用其他顏色 ) Spray Painted RAL 9007",
+        "material": "ABS",
+        "finish": {
+          "main": "MT-11010",
+          "local": ""
+        },
+        "visible": true,
+        "swatch": {
+          "type": "gradient",
+          "start": "#e4dfd8",
+          "end": "#b2b0ae",
+          "angle": 45
+        },
+        "position": {
+          "x": 58.45,
+          "y": 74.08
+        }
+      },
+      {
+        "name": "Rubber Feet",
+        "colorPlan": "Black",
+        "material": "Silicone",
+        "finish": {
+          "main": "Natural Finish",
+          "local": ""
+        },
+        "visible": true,
+        "swatch": {
+          "type": "solid",
+          "start": "#000000",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 57.77,
+          "y": 91.73
+        }
+      }
+    ]
+  }
+}

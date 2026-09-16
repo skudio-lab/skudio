@@ -1,0 +1,248 @@
+{
+  "slug": "g20",
+  "sequence": "02",
+  "title": "G20 Packaging",
+  "hero": {
+    "image": "g20_hero.png",
+    "summary": "從內盒、隔板到標籤，為 G20 整理一套完整的包裝安排。在兩種 Adaptor 尺寸與 Cost Down 條件下，將結構、識別與工程圖面逐一銜接。"
+  },
+  "overview": {
+    "company": "Compal Broadband Networks",
+    "brand": "CommScope ARRIS",
+    "year": "2024",
+    "role": [
+      "Packaging Design",
+      "Packaging Engineering"
+    ]
+  },
+  "brief": {
+    "ista": "1A",
+    "weight": "Carton < 10 kg",
+    "markets": "U.S.A / UL, FCC",
+    "productSize": "L : 155 mm, W : 60 mm, H : 218 mm",
+    "accessories": "Adaptor have 2 size.",
+    "priority": "Cost Down"
+  },
+  "components": {
+    "visible": true,
+    "image": "g20_asm.png",
+    "items": [
+      {
+        "name": "Inner Box",
+        "description": "",
+        "material": "E/F, 14 kgf",
+        "quantity": "1",
+        "size": "L : 236, W: 185, H : 109",
+        "position": {
+          "x": 27.706942839496335,
+          "y": 83.27792481435702
+        },
+        "visible": true,
+        "label": {
+          "enabled": false,
+          "adhesive": "",
+          "regulations": ""
+        }
+      },
+      {
+        "name": "Partition",
+        "description": "",
+        "material": "E/F, 14 kgf",
+        "quantity": "1",
+        "size": "L : 218, W: 155, H : 106",
+        "position": {
+          "x": 24.578686593481034,
+          "y": 62.362095326413645
+        },
+        "visible": true,
+        "label": {
+          "enabled": false,
+          "adhesive": "",
+          "regulations": ""
+        }
+      },
+      {
+        "name": "Carton",
+        "description": "",
+        "material": "AB/F, 16 kgf",
+        "quantity": "1/3",
+        "size": "L : 355, W: 259, H : 218",
+        "position": {
+          "x": 67.15014344915524,
+          "y": 68.28623360172567
+        },
+        "visible": true,
+        "label": {
+          "enabled": false,
+          "adhesive": "",
+          "regulations": ""
+        }
+      },
+      {
+        "name": "PE Bag",
+        "description": "",
+        "material": "PE",
+        "quantity": "1",
+        "size": "L : 290, W: 283 , T = 0.04",
+        "position": {
+          "x": 40.968020302040166,
+          "y": 52.8109469449641
+        },
+        "visible": true,
+        "label": {
+          "enabled": false,
+          "adhesive": "",
+          "regulations": ""
+        }
+      },
+      {
+        "name": "Quick Guide",
+        "description": "4 colors printed",
+        "material": "129g art paper",
+        "quantity": "1",
+        "size": "L : 101, W : 101",
+        "position": {
+          "x": 47.156518967166086,
+          "y": 45.91960117820631
+        },
+        "visible": true,
+        "label": {
+          "enabled": false,
+          "adhesive": "",
+          "regulations": ""
+        }
+      },
+      {
+        "name": "Chassis Label",
+        "description": "UL PGJI2",
+        "material": "75 micron Matte White PET TC ",
+        "quantity": "1",
+        "size": "L : 70, W : 44",
+        "position": {
+          "x": 19.886305337503984,
+          "y": 44.71059596469543
+        },
+        "visible": true,
+        "label": {
+          "enabled": true,
+          "adhesive": "Acrylic",
+          "regulations": "UL PGJI2, RoHS"
+        }
+      },
+      {
+        "name": "QIG Label",
+        "description": "",
+        "material": "Art Paper",
+        "quantity": "1",
+        "size": "L : 82, W : 31",
+        "position": {
+          "x": 29.47508442580491,
+          "y": 18.958745622708552
+        },
+        "visible": true,
+        "label": {
+          "enabled": true,
+          "adhesive": "Rubber",
+          "regulations": "RoHS"
+        }
+      },
+      {
+        "name": "Box Label",
+        "description": "",
+        "material": "Art Paper",
+        "quantity": "1",
+        "size": "L : 90, W : 40",
+        "position": {
+          "x": 75.58283690627988,
+          "y": 46.40320215673163
+        },
+        "visible": true,
+        "label": {
+          "enabled": true,
+          "adhesive": "Rubber",
+          "regulations": "RoHS"
+        }
+      },
+      {
+        "name": "Carton Label",
+        "description": "",
+        "material": "Art Paper",
+        "quantity": "1/3",
+        "size": "L : 100, W : 70",
+        "position": {
+          "x": 83.60748475852725,
+          "y": 66.83542513175458
+        },
+        "visible": true,
+        "label": {
+          "enabled": true,
+          "adhesive": "Rubber",
+          "regulations": "RoHS"
+        }
+      },
+      {
+        "name": "Warning Sticker",
+        "description": "",
+        "material": "Eggshell Sticker",
+        "quantity": "1",
+        "size": "L : 12, W : 12",
+        "position": {
+          "x": 13.833815647912019,
+          "y": 22.343963541176066
+        },
+        "visible": true,
+        "label": {
+          "enabled": false,
+          "adhesive": "Acrylic",
+          "regulations": "RoHS"
+        }
+      },
+      {
+        "name": "Round Transparent Stickers",
+        "description": "",
+        "material": "Transparent",
+        "quantity": "1",
+        "size": "L : 50, W : 50",
+        "position": {
+          "x": 43.68823716927,
+          "y": 87.50944582884263
+        },
+        "visible": true,
+        "label": {
+          "enabled": false,
+          "adhesive": "",
+          "regulations": ""
+        }
+      }
+    ]
+  },
+  "labels": {
+    "visible": true,
+    "overviewPdf": "g20_l.pdf"
+  },
+  "deliverables": {
+    "visible": true,
+    "items": [
+      {
+        "title": "Carton Quotation Drawing",
+        "pdf": "g20_c.pdf",
+        "visible": true
+      },
+      {
+        "title": "Inner Box Quotation Drawing",
+        "pdf": "g20_innerbox.pdf",
+        "visible": true
+      },
+      {
+        "title": "Partition Quotation Drawing",
+        "pdf": "g20_partition.pdf",
+        "visible": true
+      },
+      {
+        "title": "PE DRAWING : BOM, Pallet Analysis, Labels Definition",
+        "pdf": "g20_pe.pdf",
+        "visible": true
+      }
+    ]
+  }
+}

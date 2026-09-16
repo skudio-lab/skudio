@@ -1,0 +1,108 @@
+{
+  "project": {
+    "sequence": "06",
+    "title": "Packaging Assistant",
+    "category": "Packaging Engineering",
+    "year": "2026",
+    "role": "Engineering Tool / UI Design / Development"
+  },
+  "hero": {
+    "image": "../assets/images/pkg_hero.jpeg",
+    "statement": "從一道摺線，到一整櫃的安排。自動演算 Pizza 盒刀模、上百筆裝箱與棧板方案，以及各貨櫃組合的滿棧總數量。"
+  },
+  "challenge": {
+    "title": "尺寸改一處，包裝往往跟著重算",
+    "description": "產品尺寸、配件空間、紙板厚度與運輸限制彼此牽動，一次調整，常伴隨反覆手算與修改圖面。希望在設計早期，就能看清這些條件如何影響彼此。"
+  },
+  "solution": {
+    "title": "把刀模、裝箱與運輸接在一起",
+    "description": "從產品與包材條件出發，生成 Pizza 盒刀模，演算上百筆每箱入數與棧板利用率，再計算各貨櫃組合的滿棧裝載總量，將評估一路延伸到運輸配置。",
+    "image": "../assets/images/ai/pkg_3-0.png",
+    "ratio": "auto"
+  },
+  "features": [
+    {
+      "number": "01",
+      "title": "Pizza Box Diecut",
+      "description": "依產品尺寸與結構條件，演算 Pizza 盒刀模的刀線、摺線與各區域尺寸，讓條件對應到圖面。",
+      "image": "../assets/images/ai/pkg_3-1.png",
+      "imageLabel": "PZ DIECUT · 1600 × 900 px",
+      "ratio": "auto",
+      "layout": "full"
+    },
+    {
+      "number": "02",
+      "title": "Formula Evidence",
+      "description": "將運算式、代入值與結果並列，核對時能看見計算的來由。",
+      "image": "../assets/images/ai/pkg_3-2.png",
+      "imageLabel": "FORMULA EVIDENCE · 1200 × 1200 px",
+      "ratio": "auto",
+      "layout": "half"
+    },
+    {
+      "number": "03",
+      "title": "Carton & Pallet",
+      "description": "演算上百筆每箱入數與棧板排列方案，並列比較每層箱數、產品入數與棧板利用率，逐步選定裝箱配置。",
+      "image": "../assets/images/ai/pkg_3-3.png",
+      "imageLabel": "CARTON & PALLET · 1200 × 1200 px",
+      "ratio": "auto",
+      "layout": "half"
+    },
+    {
+      "number": "04",
+      "title": "SVG Export",
+      "description": "輸出毫米制 Illustrator SVG，保留 CUT 與 CREASE 分組，銜接後續工程作業。",
+      "image": "../assets/images/ai/pkg_04.png",
+      "imageLabel": "SVG EXPORT · 1600 × 900 px",
+      "ratio": "auto",
+      "layout": "full"
+    },
+    {
+      "number": "05",
+      "title": "Pallet & Container Analysis",
+      "description": "選定裝箱方案與堆疊層數後，演算不同棧板與貨櫃組合的滿棧裝載總量。配置圖旁並列棧板數、產品總入數、平面／高度利用率及剩餘高度，讓各方案的差異有圖可看、有數據可比。支援兩種棧板搭配空運、20 呎、40 呎與 40 呎 HQ，共 8 組物流配置。",
+      "image": "../assets/images/ai/pkg_4-5.png",
+      "imageLabel": "PALLET & CONTAINER ANALYSIS",
+      "ratio": "auto",
+      "layout": "full"
+    }
+  ],
+  "results": [
+    {
+      "value": "PZ",
+      "title": "刀模自動演算",
+      "description": "將產品與包材條件轉為 Pizza 盒刀模圖。"
+    },
+    {
+      "value": "100+",
+      "title": "裝箱方案演算",
+      "description": "一次評估上百筆每箱入數與棧板利用率，供方案比較。"
+    },
+    {
+      "value": "8",
+      "title": "滿棧總量分析",
+      "description": "彙整支援的貨櫃與空運組合，計算棧板數與產品總入數。"
+    },
+    {
+      "value": "SVG",
+      "title": "可交付資料",
+      "description": "保留 CUT／CREASE 分組，讓圖面接續進入工程作業。"
+    }
+  ],
+  "application": {
+    "enabled": true,
+    "label": "Open Application",
+    "url": "../apps/packaging-assistant/index.html",
+    "openInNewTab": true
+  },
+  "navigation": {
+    "previous": {
+      "title": "Barcode Atelier",
+      "url": "ai-barcode-atelier.html"
+    },
+    "next": {
+      "title": "SOP Editor",
+      "url": "ai-sop-editor.html"
+    }
+  }
+}

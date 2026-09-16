@@ -1,0 +1,90 @@
+{
+  "project": {
+    "sequence": "04",
+    "title": "Render Gallery",
+    "category": "Design Asset Management",
+    "year": "2026",
+    "role": "Concept / UI Design / Development"
+  },
+  "hero": {
+    "image": "../assets/images/ai/render-gallery-hero.jpeg",
+    "statement": "讓藏在資料夾裡的設計，再次被看見。把 KeyShot 渲染成果整理成方便搜尋與比較的畫廊。"
+  },
+  "challenge": {
+    "title": "版本愈多，愈需要一個看圖的地方",
+    "description": "設計累積了大量圖片與影片，挑選成果卻常要在檔案總管裡逐一開啟。希望瀏覽、搜尋與版本比較，能在同一個地方完成。"
+  },
+  "solution": {
+    "title": "從渲染資料夾，展開一面作品牆",
+    "description": "直接讀取選定的渲染資料夾，建立本機媒體畫廊。透過檔名搜尋、縮圖尺寸調整與全畫面檢視，從整批成果慢慢看到細節。",
+    "image": "../assets/images/ai/ren_2-1.jpg",
+    "ratio": "auto"
+  },
+  "features": [
+    {
+      "number": "01",
+      "title": "Media Gallery",
+      "description": "將資料夾中的圖片與影片整理成畫廊，先看見整體，再挑選細節。",
+      "image": "../assets/images/ai/ren_3-1.jpg",
+      "imageLabel": "MEDIA GALLERY · 1600 × 900 px",
+      "ratio": "auto",
+      "layout": "full"
+    },
+    {
+      "number": "02",
+      "title": "Search & Scale",
+      "description": "依檔名搜尋版本，調整縮圖尺寸，找到適合當下的瀏覽密度。",
+      "image": "../assets/images/ai/ren_3-2.jpg",
+      "imageLabel": "SEARCH & SCALE · 1200 × 900 px",
+      "ratio": "auto",
+      "layout": "half"
+    },
+    {
+      "number": "03",
+      "title": "Focused Review",
+      "description": "全畫面逐張查看圖片或播放影片，將注意力留給眼前的設計。",
+      "image": "../assets/images/ai/ren_3-3.jpg",
+      "imageLabel": "FULL VIEW · 1200 × 900 px",
+      "ratio": "auto",
+      "layout": "half"
+    }
+  ],
+  "results": [
+    {
+      "value": "",
+      "title": "快速瀏覽",
+      "description": "用畫廊瀏覽渲染成果，減少逐一開檔的往返。"
+    },
+    {
+      "value": "",
+      "title": "方便比較",
+      "description": "在同一介面切換圖片與影片，方便挑選與比較。"
+    },
+    {
+      "value": "",
+      "title": "快速搜尋",
+      "description": "依檔名即時篩選，縮小尋找設計版本的範圍。"
+    },
+    {
+      "value": "Local",
+      "title": "保護設計資料",
+      "description": "媒體留在本機瀏覽，不需上傳設計資料。"
+    }
+  ],
+  "application": {
+    "enabled": true,
+    "label": "Open Application",
+    "url": "../apps/render-gallery/index.html",
+    "openInNewTab": true
+  },
+  "navigation": {
+    "previous": {
+      "title": "A Din Scan",
+      "url": "ai-a-din-scan.html"
+    },
+    "next": {
+      "title": "Barcode Atelier",
+      "url": "ai-barcode-atelier.html"
+    }
+  }
+}

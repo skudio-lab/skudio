@@ -1,0 +1,200 @@
+{
+  "slug": "dc6",
+  "sequence": "11",
+  "title": "DC6",
+  "brand": "Tekspring",
+  "hero": {
+    "image": "",
+    "alt": "DC6 產品主視覺"
+  },
+  "overview": {
+    "company": "Tekspring",
+    "category": "Consumer Electronics",
+    "year": "—",
+    "role": [
+      "Industrial Design"
+    ],
+    "size": {
+      "length": "",
+      "width": "",
+      "height": "",
+      "unit": "mm"
+    }
+  },
+  "brief": [
+    {
+      "title": "案件由來",
+      "content": ""
+    },
+    {
+      "title": "產品定位",
+      "content": ""
+    },
+    {
+      "title": "外觀需求",
+      "content": ""
+    },
+    {
+      "title": "CMF 需求",
+      "content": ""
+    }
+  ],
+  "gallery": [
+    {
+      "title": "Front View",
+      "image": "",
+      "alt": "",
+      "description": "",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "title": "Real View",
+      "image": "",
+      "alt": "",
+      "description": "",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "title": "Detail",
+      "image": "",
+      "alt": "",
+      "description": "",
+      "ratio": "4:3",
+      "width": "full",
+      "visible": true
+    }
+  ],
+  "cmf": {
+    "visible": true,
+    "explodedImage": {
+      "image": "",
+      "alt": "DC6 產品爆炸圖"
+    },
+    "parts": [
+      {
+        "name": "Part 01",
+        "colorPlan": "",
+        "material": "",
+        "finish": {
+          "main": "",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#d9d5cd",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 18,
+          "y": 22
+        },
+        "visible": true
+      },
+      {
+        "name": "Part 02",
+        "colorPlan": "",
+        "material": "",
+        "finish": {
+          "main": "",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#d9d5cd",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 36,
+          "y": 38
+        },
+        "visible": true
+      },
+      {
+        "name": "Part 03",
+        "colorPlan": "",
+        "material": "",
+        "finish": {
+          "main": "",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#d9d5cd",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 64,
+          "y": 24
+        },
+        "visible": true
+      },
+      {
+        "name": "Part 04",
+        "colorPlan": "",
+        "material": "",
+        "finish": {
+          "main": "",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#52514f",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 80,
+          "y": 43
+        },
+        "visible": true
+      },
+      {
+        "name": "Part 05",
+        "colorPlan": "",
+        "material": "",
+        "finish": {
+          "main": "",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#d9d5cd",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 30,
+          "y": 72
+        },
+        "visible": true
+      },
+      {
+        "name": "Part 06",
+        "colorPlan": "",
+        "material": "",
+        "finish": {
+          "main": "",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#d9d5cd",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 70,
+          "y": 74
+        },
+        "visible": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "slug": "starmens",
+  "sequence": "02",
+  "title": "STARMENS",
+  "hero": {
+    "image": "starmens_hero.png"
+  },
+  "overview": {
+    "company": "STARMENS",
+    "category": "Brand Identity",
+    "year": "2021",
+    "role": [
+      "Logo Design",
+      "Visual Identity"
+    ]
+  },
+  "brief": [
+    {
+      "title": "案件由來",
+      "content": "為專注聲音相關半導體研發的 STARMENS，設計公司成立時的 LOGO，讓新品牌有一個清楚的起點。"
+    },
+    {
+      "title": "品牌需求",
+      "content": "公司草創時由瑞昱半導體與仁寶集團共同創辦，識別風格需呼應瑞昱的螃蟹形象，並以星星作為主要圖像。"
+    },
+    {
+      "title": "設計方向",
+      "content": "從瑞昱 LOGO 的研究分析出發，將電路走線與星星結合。以線條的延伸與轉折，連起半導體技術與品牌形象。"
+    }
+  ],
+  "development": [
+    {
+      "image": "starmens_01.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    },
+    {
+      "image": "starmens_02.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    },
+    {
+      "image": "starmens_03.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    },
+    {
+      "image": "starmens_04.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    },
+    {
+      "image": "starmens_05.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    },
+    {
+      "image": "starmens_06.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    },
+    {
+      "image": "starmens_07.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    },
+    {
+      "image": "starmens_08.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    }
+  ],
+  "finalLogo": {
+    "image": "starmens_08.png"
+  },
+  "applications": [
+    {
+      "ratio": "original",
+      "width": "auto",
+      "image": "starmens_a1.png",
+      "title": "",
+      "description": "",
+      "visible": true
+    }
+  ]
+}

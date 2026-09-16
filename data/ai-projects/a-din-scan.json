@@ -1,0 +1,90 @@
+{
+  "project": {
+    "sequence": "03",
+    "title": "A Din Scan",
+    "category": "Document Processing",
+    "year": "2026",
+    "role": "Concept / UI Design / Development"
+  },
+  "hero": {
+    "image": "../assets/images/ai/a-din-scan-hero.jpeg",
+    "statement": "將文字文件 PDF 轉成高清解析度的掃描檔案，適用於合約、通關文件與報告書。"
+  },
+  "challenge": {
+    "title": "省去反覆列印與掃描的往返",
+    "description": "合約、通關文件與報告書若需要高清掃描檔，傳統流程往往得先列印、再掃描，耗費紙張與工作時間。"
+  },
+  "solution": {
+    "title": "把文字 PDF 直接整理成高清掃描檔",
+    "description": "將 PDF 頁面導覽、雜訊與對比調整、高清輸出控制放在同一畫面，支援單張精修與多檔批次作業，減少列印、掃描、重做的時間與紙張消耗。",
+    "image": "../assets/images/ai/scan_2-1.jpg",
+    "ratio": "auto"
+  },
+  "features": [
+    {
+      "number": "01",
+      "title": "Before & After",
+      "description": "原始頁面與即時處理結果並排，調整前後的差異可以直接對照。",
+      "image": "../assets/images/ai/scan_3-1.jpg",
+      "imageLabel": "BEFORE & AFTER · 1600 × 900 px",
+      "ratio": "auto",
+      "layout": "full"
+    },
+    {
+      "number": "02",
+      "title": "Document Adjustment",
+      "description": "在同一處調整紙張雜訊、對比、微旋轉與輸出品質。",
+      "image": "../assets/images/ai/scan_3-2.jpg",
+      "imageLabel": "ADJUSTMENT · 1200 × 1200 px",
+      "ratio": "auto",
+      "layout": "half"
+    },
+    {
+      "number": "03",
+      "title": "Batch Processing",
+      "description": "一次載入多份 PDF，套用同一組設定後輸出，省去逐份重做。",
+      "image": "../assets/images/ai/scan_3-3.jpg",
+      "imageLabel": "BATCH PROCESS · 1200 × 1200 px",
+      "ratio": "auto",
+      "layout": "half"
+    }
+  ],
+  "results": [
+    {
+      "value": "",
+      "title": "減少重複調整",
+      "description": "不必先列印再掃描，直接將文字 PDF 整理成高清解析度檔案。"
+    },
+    {
+      "value": "",
+      "title": "統一輸出品質",
+      "description": "合約、通關文件與報告書可套用一致的視覺設定與輸出品質。"
+    },
+    {
+      "value": "Batch",
+      "title": "批次處理",
+      "description": "多份 PDF 一次整理，省下反覆列印、掃描與等待的工作時間。"
+    },
+    {
+      "value": "Local",
+      "title": "本機處理",
+      "description": "文件在本機處理，減少紙張使用，也不需上傳到外部服務。"
+    }
+  ],
+  "application": {
+    "enabled": true,
+    "label": "Open Application",
+    "url": "../apps/a-din-scan/index.html",
+    "openInNewTab": true
+  },
+  "navigation": {
+    "previous": {
+      "title": "Project Planner",
+      "url": "ai-project-planner.html"
+    },
+    "next": {
+      "title": "Render Gallery",
+      "url": "ai-render-gallery.html"
+    }
+  }
+}

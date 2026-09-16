@@ -1,0 +1,173 @@
+{
+  "slug": "t195-usb",
+  "sequence": "07",
+  "title": "T183 TOOL USB",
+  "brand": "TeamGroup",
+  "hero": {
+    "image": "",
+    "alt": "T183 USB 產品主視覺",
+    "visible": false
+  },
+  "overview": {
+    "company": "TeamGroup",
+    "category": "Storage / USB",
+    "year": "—",
+    "role": [
+      "Industrial Design"
+    ],
+    "size": {
+      "length": "",
+      "width": "",
+      "height": "",
+      "unit": "mm"
+    }
+  },
+  "brief": [],
+  "gallery": [
+    {
+      "image": "../assets/images/teamgroup/T183_01.png",
+      "title": "",
+      "description": "",
+      "ratio": "4:3",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "image": "../assets/images/teamgroup/T183_02.jpg",
+      "title": "",
+      "description": "",
+      "ratio": "4:3",
+      "width": "half",
+      "visible": true
+    }
+  ],
+  "cmf": {
+    "visible": false,
+    "explodedImage": {
+      "image": "",
+      "alt": "T183 USB 產品爆炸圖"
+    },
+    "parts": [
+      {
+        "name": "Part 01",
+        "colorPlan": "",
+        "material": "",
+        "finish": {
+          "main": "",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#d9d5cd",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 18,
+          "y": 22
+        },
+        "visible": true
+      },
+      {
+        "name": "Part 02",
+        "colorPlan": "",
+        "material": "",
+        "finish": {
+          "main": "",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#d9d5cd",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 36,
+          "y": 38
+        },
+        "visible": true
+      },
+      {
+        "name": "Part 03",
+        "colorPlan": "",
+        "material": "",
+        "finish": {
+          "main": "",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#d9d5cd",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 64,
+          "y": 24
+        },
+        "visible": true
+      },
+      {
+        "name": "Part 04",
+        "colorPlan": "",
+        "material": "",
+        "finish": {
+          "main": "",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#52514f",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 80,
+          "y": 43
+        },
+        "visible": true
+      },
+      {
+        "name": "Part 05",
+        "colorPlan": "",
+        "material": "",
+        "finish": {
+          "main": "",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#d9d5cd",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 30,
+          "y": 72
+        },
+        "visible": true
+      },
+      {
+        "name": "Part 06",
+        "colorPlan": "",
+        "material": "",
+        "finish": {
+          "main": "",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#d9d5cd",
+          "end": "#8c8780",
+          "angle": 90
+        },
+        "position": {
+          "x": 70,
+          "y": 74
+        },
+        "visible": true
+      }
+    ]
+  }
+}

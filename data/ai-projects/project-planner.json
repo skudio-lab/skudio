@@ -1,0 +1,90 @@
+{
+  "project": {
+    "sequence": "02",
+    "title": "Project Planner",
+    "category": "Project Management",
+    "year": "2026",
+    "role": "Concept / UI Design / Development"
+  },
+  "hero": {
+    "image": "../assets/images/ai/project-planner-hero.jpeg",
+    "statement": "把事情排進時間裡，也看見彼此的牽動。用一條甘特時間軸，掌握任務、進度與風險。"
+  },
+  "challenge": {
+    "title": "事情很多時，先看清楚它們的關係",
+    "description": "任務、工期、負責人與風險散在不同紀錄裡，就很難判斷工作走到了哪裡。試著用一個畫面，把專案的全貌與細節接起來。"
+  },
+  "solution": {
+    "title": "在同一條時間軸上安排工作",
+    "description": "將任務時程、相依關係、進度與工作日規則整合在單一畫面，透過調整與篩選，讓排程隨工作變化。",
+    "image": "../assets/images/ai/plan_2-1.jpg",
+    "ratio": "auto"
+  },
+  "features": [
+    {
+      "number": "01",
+      "title": "Gantt Timeline",
+      "description": "從日、週到月切換尺度，既能查看眼前的安排，也能拉遠看整體時程。",
+      "image": "../assets/images/ai/plan_3-1.jpg",
+      "imageLabel": "GANTT TIMELINE · 1600 × 900 px",
+      "ratio": "auto",
+      "layout": "full"
+    },
+    {
+      "number": "02",
+      "title": "Task Management",
+      "description": "把負責人、日期、進度、優先級與任務狀態放在一起，交代每件事的安排。",
+      "image": "../assets/images/ai/plan_3-2.jpg",
+      "imageLabel": "TASK EDITOR · 1200 × 900 px",
+      "ratio": "auto",
+      "layout": "half"
+    },
+    {
+      "number": "03",
+      "title": "Risk & Filter",
+      "description": "依負責人與狀態篩選，找出需要多留意的風險工作。",
+      "image": "../assets/images/ai/plan_3-3.jpg",
+      "imageLabel": "RISK FILTER · 1200 × 900 px",
+      "ratio": "auto",
+      "layout": "half"
+    }
+  ],
+  "results": [
+    {
+      "value": "",
+      "title": "集中管理",
+      "description": "在同一畫面查看任務、時程與負責人，減少來回比對。"
+    },
+    {
+      "value": "",
+      "title": "提早辨識風險",
+      "description": "對照狀態與時間軸，辨識已延遲的項目。"
+    },
+    {
+      "value": "",
+      "title": "彈性排程",
+      "description": "配合不同週末規則與時間尺度，調整專案安排。"
+    },
+    {
+      "value": "Local",
+      "title": "本機工作",
+      "description": "專案資料可自行匯入與匯出，保留在自己的工作環境中。"
+    }
+  ],
+  "application": {
+    "enabled": true,
+    "label": "Open Application",
+    "url": "../apps/project-planner/index.html",
+    "openInNewTab": true
+  },
+  "navigation": {
+    "previous": {
+      "title": "SOP Editor",
+      "url": "ai-sop-editor.html"
+    },
+    "next": {
+      "title": "A Din Scan",
+      "url": "ai-a-din-scan.html"
+    }
+  }
+}

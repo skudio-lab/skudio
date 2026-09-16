@@ -1,0 +1,88 @@
+{
+  "projects": [
+    {
+      "sequence": "01",
+      "title": "SOP Editor",
+      "category": "Knowledge & Workflow",
+      "summary": "把做過的事，好好留下來。用圖像化 SOP 串起步驟與資料，讓經驗容易查找，也容易交接。",
+      "features": [
+        "步驟與圖片標註",
+        "附件與範本管理",
+        "JSON 結構化知識"
+      ],
+      "image": "assets/images/ai/sop-editor-hero.jpeg",
+      "imageLabel": "SOP EDITOR · 1600 × 900 px",
+      "url": "projects/ai-sop-editor.html"
+    },
+    {
+      "sequence": "02",
+      "title": "Project Planner",
+      "category": "Project Management",
+      "summary": "把零散任務排進甘特時間軸，看清負責人、相依關係與風險，也看見工作如何往前。",
+      "features": [
+        "工作日排程",
+        "進度與風險追蹤",
+        "專案資料匯入匯出"
+      ],
+      "image": "assets/images/ai/project-planner-hero.jpeg",
+      "imageLabel": "PROJECT PLANNER · 1600 × 900 px",
+      "url": "projects/ai-project-planner.html"
+    },
+    {
+      "sequence": "03",
+      "title": "A Din Scan",
+      "category": "Document Processing",
+      "summary": "讓掃描後的整理少一些往返，在同一介面完成文件修正、預覽與單張或批次輸出。",
+      "features": [
+        "PDF 即時預覽",
+        "雜訊與對比調整",
+        "單張與批次輸出"
+      ],
+      "image": "assets/images/ai/a-din-scan-hero.jpeg",
+      "imageLabel": "A DIN SCAN · 1600 × 900 px",
+      "url": "projects/ai-a-din-scan.html"
+    },
+    {
+      "sequence": "04",
+      "title": "Render Gallery",
+      "category": "Design Asset Management",
+      "summary": "讓資料夾裡的 KeyShot 渲染成果展開成畫廊，從整批瀏覽到版本比較，慢慢挑出合適的畫面。",
+      "features": [
+        "資料夾快速載入",
+        "圖片與影片瀏覽",
+        "搜尋與縮圖調整"
+      ],
+      "image": "assets/images/ai/render-gallery-hero.jpeg",
+      "imageLabel": "RENDER GALLERY · 1600 × 900 px",
+      "url": "projects/ai-render-gallery.html"
+    },
+    {
+      "sequence": "05",
+      "title": "Barcode Atelier",
+      "category": "Document & Label Utility",
+      "summary": "從名片 QR Code 到物流與商品條碼，在自己的離線工作室裡完成製作與向量輸出。",
+      "features": [
+        "vCard QR Code",
+        "Code 128 與 EAN",
+        "向量 SVG 匯出"
+      ],
+      "image": "assets/images/ai/barcode-atelier-hero.jpeg",
+      "imageLabel": "BARCODE ATELIER · 1600 × 900 px",
+      "url": "projects/ai-barcode-atelier.html"
+    },
+    {
+      "sequence": "06",
+      "title": "Packaging Assistant",
+      "category": "Packaging Engineering",
+      "summary": "從一道摺線到一整櫃的安排，用確定性公式串起刀模、組件與棧板配置，讓工程條件有圖可看、有結果可核對。",
+      "features": [
+        "PZ 刀模 Region 1—7",
+        "Carton 與棧板配置",
+        "毫米制 SVG 匯出"
+      ],
+      "image": "assets/images/pkg_hero.jpeg",
+      "imageLabel": "PACKAGING ASSISTANT · 1600 × 900 px",
+      "url": "projects/ai-packaging-assistant.html"
+    }
+  ]
+}

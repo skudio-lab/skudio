@@ -1,0 +1,242 @@
+{
+  "slug": "NVG653UX FWA",
+  "sequence": "05",
+  "title": "NVG653UX",
+  "brand": "CBN",
+  "hero": {
+    "image": "NVG653UX_hero.png",
+    "alt": "NVG653UX 產品主視覺"
+  },
+  "overview": {
+    "company": "CBN ODM CommScope ARRIS",
+    "category": "Networking / 5G NR Fixed Wireless Router",
+    "year": "2023",
+    "role": [
+      "工業設計",
+      "包材設計",
+      "熱流模擬支援"
+    ],
+    "size": {
+      "length": 105,
+      "width": 126,
+      "height": 225,
+      "unit": "mm"
+    }
+  },
+  "brief": [
+    {
+      "title": "案件由來",
+      "content": "這件作品源自 CBN 與 ARRIS 的設計提案，探索網通設備在造型與使用細節上的表達。"
+    },
+    {
+      "title": "產品定位",
+      "content": " 5G NR FWA "
+    },
+    {
+      "title": "外觀需求",
+      "content": "以 CBN Branding ID 的筒狀造型為基礎，將運用煙囪效應的散熱孔藏進機身，保留外觀的完整輪廓。"
+    },
+    {
+      "title": "CMF 需求",
+      "content": "以細咬花呈現表面質感，色彩計畫朝北歐簡約風格發展，讓筒狀機身顯得安定、輕巧。"
+    }
+  ],
+  "gallery": [
+    {
+      "title": "Front View",
+      "image": "NVG653UX_F.png",
+      "alt": "NVG653UX Front View",
+      "description": "",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "title": "Real View",
+      "image": "NVG653UX_R.png",
+      "alt": "NVG653UX Real View",
+      "description": "",
+      "ratio": "1:1",
+      "width": "half",
+      "visible": true
+    },
+    {
+      "image": "NVG653UX_D1.png",
+      "title": "5G訊號強度變化設計",
+      "description": "以實體 LED 燈呈現訊號強弱，取代螢幕 APP 的顯示方式。透過精密結構，讓緊密排列的每一段訊號燈條仍能獨立顯示，將連線狀態帶到機身上。",
+      "alt": "",
+      "ratio": "1:1",
+      "width": "full",
+      "visible": true
+    }
+  ],
+  "cmf": {
+    "visible": true,
+    "explodedImage": {
+      "image": "NVG653UX_EXPLODE.png",
+      "alt": "NVG653UX 產品爆炸圖"
+    },
+    "parts": [
+      {
+        "name": "Top Cover",
+        "colorPlan": "PANTONE 11-0602 TCX",
+        "material": "ABS",
+        "finish": {
+          "main": "MT-11010",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#f2f1ed",
+          "end": "#f2f1ed",
+          "angle": 90
+        },
+        "position": {
+          "x": 56.68,
+          "y": 6.11
+        },
+        "visible": true
+      },
+      {
+        "name": "Middle Cover",
+        "colorPlan": "PANTONE 11-0602 TCX",
+        "material": "ABS",
+        "finish": {
+          "main": "MT-11010",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#f2f1ed",
+          "end": "#f2f1ed",
+          "angle": 90
+        },
+        "position": {
+          "x": 42.6,
+          "y": 37.25
+        },
+        "visible": true
+      },
+      {
+        "name": "Light Pipe",
+        "colorPlan": "N/A",
+        "material": "Translucent PC",
+        "finish": {
+          "main": "MT-11015",
+          "local": ""
+        },
+        "swatch": {
+          "type": "gradient",
+          "start": "#f5f7f7",
+          "end": "#c9d2d4",
+          "angle": 135
+        },
+        "position": {
+          "x": 57.49,
+          "y": 58.53
+        },
+        "visible": true
+      },
+      {
+        "name": "Push Button",
+        "colorPlan": "PANTONE 11-0602 TCX",
+        "material": "ABS",
+        "finish": {
+          "main": "MT-11010",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#f2f1ed",
+          "end": "#f2f1ed",
+          "angle": 90
+        },
+        "position": {
+          "x": 56.68,
+          "y": 69.41
+        },
+        "visible": true
+      },
+      {
+        "name": "Rear I/O Panel",
+        "colorPlan": "PANTONE 11-0602 TCX",
+        "material": "ABS",
+        "finish": {
+          "main": "MT-11010",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#f2f1ed",
+          "end": "#f2f1ed",
+          "angle": 90
+        },
+        "position": {
+          "x": 40.56,
+          "y": 60.47
+        },
+        "visible": true
+      },
+      {
+        "name": "SIM Card Corver",
+        "colorPlan": "PMS 174-1 C",
+        "material": "Silicone",
+        "finish": {
+          "main": "Natural Finish",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#8d8d89",
+          "end": "#8d8d89",
+          "angle": 90
+        },
+        "position": {
+          "x": 57.77,
+          "y": 83.92
+        },
+        "visible": true
+      },
+      {
+        "name": "Rubber Feet",
+        "colorPlan": "PMS 174-1 C",
+        "material": "Silicone",
+        "finish": {
+          "main": "Natural Finish",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#8d8d89",
+          "end": "#8d8d89",
+          "angle": 90
+        },
+        "position": {
+          "x": 50.9,
+          "y": 95.04
+        },
+        "visible": true
+      },
+      {
+        "name": "Bottom Cover",
+        "colorPlan": "PMS 174-1 C",
+        "material": "ABS",
+        "finish": {
+          "main": "Natural Finish",
+          "local": ""
+        },
+        "swatch": {
+          "type": "solid",
+          "start": "#8d8d89",
+          "end": "#8d8d89",
+          "angle": 90
+        },
+        "position": {
+          "x": 42.12,
+          "y": 76.91
+        },
+        "visible": true
+      }
+    ]
+  }
+}

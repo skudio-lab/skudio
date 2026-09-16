@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>A Din Scan｜PDF 掃描工作室</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+:root{color-scheme:dark;--bg:#101110;--card:#20211f;--accent:#d8b978;--border:#353129;--text-main:#eee9df;--text-dim:#a39e92;--radius:14px;font-family:Inter,"Microsoft JhengHei",system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;min-width:320px;background:var(--bg);color:var(--text-main);line-height:1.5}button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.38;cursor:not-allowed}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.ra-hero{position:relative;height:100svh;overflow:clip;background:radial-gradient(ellipse at 50% 72%,#b08b3528,transparent 56%),radial-gradient(ellipse at 85% 8%,#82612220,transparent 42%),linear-gradient(125deg,#171713,#090a09 55%,#17150f);isolation:isolate;--s:1}
+.ra-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,#e4c38d06 48%,transparent 68%);z-index:-1}
+.ra-intro{position:absolute;top:18%;left:50%;transform:translateX(-50%);text-align:center;width:90%;pointer-events:none}
+.ra-eyebrow{font-size:clamp(12px,1vw,16px);margin:0 0 24px}
+.ra-hero h1{margin:0 0 24px;font-size:clamp(30px,3.23vw,62px);font-weight:400}
+.ra-overview{margin:0;font-size:clamp(17px,1.56vw,30px)}
+/* The anchor is the shared circle center; only track rotates. No intermediate clipping. */
+.ra-wheel-anchor{position:absolute;left:50%;top:var(--cy);width:0;height:0}
+.ra-wheel-scale{transform:scale(var(--s));transform-origin:0 0}
+.ra-roulette-track{width:0;height:0;transform-origin:0 0;transition:transform .95s cubic-bezier(.22,.75,.18,1)}
+.ra-card{position:absolute;left:-160px;top:-120px;width:320px;height:240px;display:grid;place-items:center;transform-origin:160px 120px;border:1px solid #bda981;background:linear-gradient(145deg,#222,#080808 70%);color:#eee5d6;text-decoration:none;box-shadow:0 12px 30px #0009;font-size:24px}
+.ra-card:hover{border-color:#ffe3a8}
+.ra-card:focus-visible,.ra-button:focus-visible,.ra-scroll:focus-visible{outline:2px solid #ffe3a8;outline-offset:5px}
+.ra-controls{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:calc(30px * var(--s));z-index:2}
+.ra-button{width:clamp(36px,calc(60px * var(--s)),60px);height:clamp(36px,calc(60px * var(--s)),60px);border:1px solid #bda981;border-radius:50%;background:transparent;color:inherit;font:24px Georgia;cursor:pointer}
+.ra-button:disabled{opacity:.35;cursor:default}
+.ra-number{width:calc(60px * var(--s));min-width:28px;text-align:center;font-size:clamp(18px,calc(32px * var(--s)),32px)}
+.ra-meta,.ra-scroll,.ra-progress{position:absolute;bottom:3.5%;z-index:2}
+.ra-meta{left:15%;font-size:clamp(10px,1vw,16px)}
+.ra-scroll{left:50%;transform:translateX(-50%);color:inherit;text-decoration:none;font-size:clamp(10px,1vw,16px)}
+.ra-progress{right:11%;width:10.5%;height:4px;background:#806d54}
+.ra-progress i{display:block;height:100%;background:#eee5d6;transition:width .5s}
+.ra-next-session{min-height:100svh;background:#000}
+@media(max-width:600px){.ra-meta{left:5%}.ra-progress{right:5%;width:15%}.ra-intro{top:17%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ra-roulette-track,.ra-progress i{transition:none}}
+
+.ra-hero{font-family:Georgia,"Microsoft JhengHei",serif;color:#eee5d6;line-height:1.5}.ra-hero .ra-eyebrow{font-weight:400;letter-spacing:.08em;color:inherit}.ra-card{padding:18px 22px;display:flex;flex-direction:column;justify-content:space-between;text-align:left}.ra-card .code-art{height:88px;width:100%}.ra-card .card-title{font-size:30px}.ra-card .card-caption{width:100%}.ra-button{padding:0;min-height:0;transition:border-color .2s;line-height:1}.ra-button:not(:disabled):hover{transform:none}.ra-meta{color:inherit}.ra-progress{margin:0}.ra-number{white-space:nowrap}.ra-scroll:hover{color:#ffe3a8}
+
+.card-index{font-size:12px;letter-spacing:.17em;color:#d2ba95}.card-title{font:30px Georgia,serif}.card-caption{display:flex;justify-content:space-between;font-size:14px;color:#c1b79f}.card-caption span{font-size:12px}.code-art{display:flex;justify-content:center;align-items:center}.code-art svg{height:80px;width:100px;color:var(--accent)}
+.scan-session{min-height:100svh;padding:30px 24px;background:radial-gradient(ellipse at 90% 5%,#a6873615,transparent 45%),#101110}.scan-heading{max-width:1800px;margin:0 auto 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}.scan-heading h2{font:28px Georgia,"Microsoft JhengHei",serif;margin:8px 0}.scan-eyebrow{font-size:11px;color:var(--accent);letter-spacing:.16em}.scan-back{color:var(--accent);font-size:14px;text-decoration:none;border-bottom:1px solid #8e7958;padding:8px 0}.scan-session:focus{outline:none}.scan-workspace{display:flex;max-width:1800px;margin:auto;height:max(760px,calc(100svh - 155px));gap:16px;transition:opacity .18s,transform .18s}.scan-workspace.leaving{opacity:0;transform:translateY(16px)}.scan-workspace.arriving{animation:scan-arrive .42s both}@keyframes scan-arrive{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.sidebar,.compare-pane,.pages-panel{background:linear-gradient(145deg,#20211f,#191a18);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 16px 45px #0003}.sidebar{width:320px;flex:0 0 320px;padding:24px;display:flex;flex-direction:column;gap:20px;overflow-y:auto}.logo-header{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:600;letter-spacing:.06em;border-bottom:1px solid var(--border);padding-bottom:20px;color:var(--text-main)}
+.mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:8px}.mode-btn{display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:10px 6px;border:1px solid #393a31;border-radius:9px;background:#171916;color:var(--text-dim);font-size:11px;font-weight:600;transition:background .22s,border-color .22s,color .22s}.mode-btn.active{border-color:#b89960;background:linear-gradient(135deg,#423622,#28251c);color:#f1d69f}.control-group{padding:0 0 18px;border-bottom:1px solid var(--border)}label{display:flex;justify-content:space-between;gap:12px;font-size:12px;font-weight:500;margin-bottom:12px;color:#d2cec5}label span{color:var(--accent);font-variant-numeric:tabular-nums}input[type=range]{width:100%;accent-color:var(--accent);cursor:pointer;height:18px;margin:0}.kicon{display:block;width:18px;height:18px;flex:none;object-fit:contain;filter:brightness(0) invert(1);opacity:.8}.btn-run .kicon{filter:none}
+.p-btn,.btn-run{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:1px solid #414035;border-radius:9px;padding:10px 14px;background:#2a2b25;color:#d8d2c4;font-size:12px;font-weight:600;transition:transform .2s,border-color .2s,background .2s,box-shadow .2s}.btn-run{margin-top:auto;min-height:46px;background:linear-gradient(110deg,#bc9554,#e7ce95 55%,#c5a361);border-color:transparent;color:#201c13}.p-btn.active{background:#302a1d;border-color:var(--accent);color:#f1d69f}.main-stage{display:flex;flex-direction:column;min-width:0;flex:1}.viewer{display:flex;flex:1;align-items:stretch;gap:14px;min-height:0;overflow:hidden}.compare-pane{display:flex;flex-direction:column;flex:1;min-width:0;min-height:0;overflow:hidden}.pane-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;min-height:52px;flex:0 0 auto;padding:14px 16px;border-bottom:1px solid var(--border);background:#20211d;font-size:11px;font-weight:600;color:var(--text-main)}.pane-badge{font-size:9px;color:var(--accent);font-weight:500}.canvas-wrapper{position:relative;display:flex;flex:1;align-items:center;justify-content:center;min-height:220px;padding:18px;overflow:auto;background-color:#121410;background-image:radial-gradient(circle at 50% 45%,#9a783018,transparent 62%),radial-gradient(#a99b7435 .65px,transparent .65px);background-size:100% 100%,18px 18px;cursor:grab;user-select:none}.canvas-wrapper.dragging{cursor:grabbing}canvas{background:white;border-radius:2px;box-shadow:0 12px 40px #0005;transform-origin:top left}.canvas-wrapper canvas{max-width:100%;max-height:calc(100vh - 190px)}
+.pages-panel{width:150px;flex:0 0 150px;display:flex;flex-direction:column;gap:16px;padding:18px 10px}.pages-title{display:flex;align-items:center;justify-content:space-between;padding:0 4px;font-size:11px;font-weight:600;color:var(--text-dim)}#pageCount{color:var(--accent);font-variant-numeric:tabular-nums}.page-thumbs{display:flex;flex-direction:column;flex:1;min-height:0;gap:10px;overflow-y:auto;padding:2px 4px 12px;scrollbar-width:thin}.page-thumb{appearance:none;width:100%;padding:7px;border:1px solid var(--border);border-radius:9px;background:#171916;color:var(--text-dim);transition:border-color .2s,background .2s}.page-thumb.active{border-color:#b89960;background:#302a1d;color:#f1d69f}.page-thumb img{display:block;width:100%;aspect-ratio:3/4;object-fit:contain;border-radius:2px;background:#fff}.page-thumb span{display:block;margin-top:7px;font-size:10px}.empty-pages{margin:auto 4px;text-align:center;font-size:11px;line-height:1.8;color:var(--text-dim)}
+.footer{display:flex;align-items:center;justify-content:center;gap:8px;min-height:62px;flex:0 0 auto;margin-top:14px;padding:10px;border:1px solid var(--border);border-radius:12px;background:#1c1e19}.page-step{min-width:76px}.page-status{min-width:100px;text-align:center;font-size:11px;color:var(--text-dim);font-variant-numeric:tabular-nums}#status{font-size:11px;text-align:center;color:var(--text-dim);min-height:18px}#status[data-state=success],#status[data-busy=true]{color:var(--accent)}#status[data-state=error]{color:#f2a097}
+#batchArea{display:none;flex-direction:column;gap:20px;width:100%;padding:24px;min-width:0;overflow-y:auto}.progress-wrapper{background:#1c1e19;padding:20px;border:1px solid var(--border);border-radius:12px}.progress-bar-bg{height:6px;border-radius:3px;background:#353129;overflow:hidden;margin-top:15px}#progressBar{background:var(--accent);width:0;height:100%;transition:width .3s}.file-item{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px;border:1px solid var(--border);border-radius:10px;background:#1c1e19;font-size:12px}.file-item.done{border-color:#b89960;background:#302a1d}.file-name{display:flex;align-items:center;gap:10px;min-width:0}.file-name span{overflow-wrap:anywhere}#dropOverlay{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:2000;background:#101110ed;border:2px dashed var(--accent);pointer-events:none}#dropOverlay.active{display:flex}.drop-title{display:flex;align-items:center;gap:12px;font-size:clamp(16px,3vw,28px);color:var(--accent)}
+@media(hover:hover){.p-btn:not(:disabled):hover,.btn-run:not(:disabled):hover{transform:translateY(-2px);border-color:#b79a61;box-shadow:0 5px 18px #0003}.mode-btn:hover,.page-thumb:hover{border-color:#ae915c}.btn-run:not(:disabled):hover{background:linear-gradient(110deg,#d0ad6e,#f2ddb1 55%,#d2b47d)}.p-btn:not(:disabled):active,.btn-run:not(:disabled):active{transform:none}}
+@media(max-width:1180px){.scan-session{padding:24px 16px}.sidebar{width:270px;flex-basis:270px;padding:18px}.pages-panel{width:120px;flex-basis:120px}.viewer{flex-direction:column}.compare-pane{min-height:0;flex:1}.scan-workspace{height:980px}}
+@media(max-width:800px){.scan-workspace{height:auto;flex-direction:column}.sidebar{width:100%;flex-basis:auto;overflow:visible}.main-stage{flex:none;min-height:600px}.viewer{height:700px;flex:none}.pages-panel{width:100%;flex-basis:auto;max-height:250px}.page-thumbs{flex-direction:row;overflow-x:auto}.page-thumb{flex:0 0 100px}.scan-heading h2{font-size:23px}.scan-back{white-space:nowrap}.footer{flex-wrap:wrap}.scan-session{padding:24px 12px}#batchArea{padding:16px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body id="bodyZone">
+
+
+
+<div id="dropOverlay"><h1 class="drop-title"><img class="kicon" src="https://koboyo.com/icons/svg/folder-open.svg" alt="">RELEASE TO IMPORT PDF</h1></div>
+
+<section class="ra-hero" id="scan-hero" aria-label="Session 1 · 選擇掃描模式"><header class="ra-intro"><p class="ra-eyebrow">THE SCAN COLLECTION</p><h1>A Din Scan</h1><p class="ra-overview">將文字文件 PDF 轉成高清解析度掃描檔，省去列印與掃描的往返。</p></header><div class="ra-wheel-anchor"><div class="ra-wheel-scale"><div class="ra-roulette-track" id="scan-track"><a class="ra-card" href="#scan-session" data-index="0"><span class="card-index">01 / SINGLE</span><span class="code-art" aria-hidden="true"><svg viewBox="0 0 100 90" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M27 9h31l15 15v56H27zM58 9v16h15M37 39h26M37 49h26M37 59h18"/><path d="M17 26v-9h9M74 17h9v9M17 64v9h9M74 73h9v-9" opacity=".5"/></svg></span><span class="card-title">Single Adj</span><span class="card-caption">單檔調整 <span>LIVE PREVIEW</span></span></a><a class="ra-card" href="#scan-session" data-index="1"><span class="card-index">02 / BATCH</span><span class="code-art" aria-hidden="true"><svg viewBox="0 0 100 90" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 63V10h38l12 12M26 71V18h38l12 12" opacity=".5"/><path d="M34 79V26h32l15 15v38zM66 26v16h15M44 54h27M44 64h22"/></svg></span><span class="card-title">Batch Pro</span><span class="card-caption">批次處理 <span>PDF EXPORT</span></span></a></div></div></div><nav class="ra-controls" aria-label="掃描模式切換"><button class="ra-button" id="scan-prev" aria-label="上一個模式">←</button><span class="ra-number" id="scan-number" aria-live="polite">01</span><button class="ra-button" id="scan-next" aria-label="下一個模式">→</button></nav><div class="ra-meta" id="scan-meta">01 | 單檔調整</div><a class="ra-scroll" id="scan-open" href="#scan-session">開啟工作區 ↓</a><div class="ra-progress" role="progressbar" aria-label="卡片位置" aria-valuemin="1" aria-valuemax="2" id="scan-progress"><i id="scan-bar"></i></div></section>
+<section class="scan-session" id="scan-session" aria-labelledby="scan-title" tabindex="-1"><header class="scan-heading"><div><div class="scan-eyebrow">SESSION 02 / SCAN WORKSPACE</div><h2 id="scan-title">單檔調整</h2></div><a class="scan-back" href="#scan-hero">← 返回選擇</a></header><div class="scan-workspace" id="scan-workspace">
+<aside class="sidebar">
+    <div class="logo-header"><img class="kicon" src="https://koboyo.com/icons/svg/card-photos.svg" alt="">A DIN SCAN</div>
+    
+    <div class="mode-switch">
+        <button class="mode-btn active" id="modeSingle"><img class="kicon" src="https://koboyo.com/icons/svg/card-photos.svg" alt="">SINGLE ADJ</button>
+        <button class="mode-btn" id="modeBatch"><img class="kicon" src="https://koboyo.com/icons/svg/folder-files.svg" alt="">BATCH PRO</button>
+    </div>
+
+    <button class="p-btn" id="uploadTrigger" style="width:100%; border-color: var(--accent); color: var(--accent);"><img class="kicon" src="https://koboyo.com/icons/svg/folder-open.svg" alt="">IMPORT PDF FILES</button>
+    <input type="file" id="fileInput" accept="application/pdf" style="display:none" multiple>
+
+    <div class="control-group">
+        <label>Paper Noise <span id="v_noise">3</span></label>
+        <input type="range" id="noise" min="0" max="30" value="3">
+    </div>
+    <div class="control-group">
+        <label>Contrast Fix <span id="v_contrast">1.0</span></label>
+        <input type="range" id="contrast" min="1.0" max="2.5" step="0.1" value="1.0">
+    </div>
+    <div class="control-group">
+        <label>Micro Rotate <span id="v_rotate">0</span>°</label>
+        <input type="range" id="rotate" min="-3" max="3" step="0.1" value="0">
+    </div>
+    <div class="control-group">
+        <label>Export Quality <span id="v_qual">0.3</span></label>
+        <input type="range" id="qual" min="0.1" max="0.8" step="0.05" value="0.3">
+    </div>
+
+    <div id="status">SYSTEM READY</div>
+    <button id="saveBtn" class="btn-run" disabled><img class="kicon icon-dark" src="https://koboyo.com/icons/svg/duplicate-action.svg" alt="">EXECUTE ENGINE</button>
+</aside>
+
+<main class="main-stage">
+    <div class="viewer" id="singleViewer">
+        <section class="compare-pane">
+            <div class="pane-header"><span>SOURCE／來源</span><span class="pane-badge" id="origZoom">ORIGINAL · 100%</span></div>
+            <div class="canvas-wrapper"><canvas id="cOrig"></canvas></div>
+        </section>
+        <section class="compare-pane">
+            <div class="pane-header"><span>RESULT／修改效果</span><span class="pane-badge" id="scanZoom">LIVE · 100%</span></div>
+            <div class="canvas-wrapper" id="scanWrapper"><canvas id="cScan"></canvas></div>
+        </section>
+    </div>
+
+    <div id="batchArea">
+        <div class="progress-wrapper" id="progressWrapper" style="display:none;">
+            <label id="currentAction">INITIALIZING BATCH...</label>
+            <div class="progress-bar-bg">
+                <div id="progressBar"></div>
+            </div>
+        </div>
+        <div id="fileContainer" style="display: flex; flex-direction: column; gap: 12px;"></div>
+    </div>
+
+    <footer id="pageNav" class="footer"></footer>
+</main>
+
+<aside class="pages-panel" id="pagesPanel">
+    <div class="pages-title"><span>PAGES／頁面</span><span id="pageCount">0</span></div>
+    <div class="page-thumbs" id="pageThumbs"><div class="empty-pages">匯入 PDF 後<br>在這裡選擇頁面</div></div>
+</aside>
+
+</div></section>
+<script>
+    const { jsPDF } = window.jspdf;
+    const pdfjsLib = window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+
+    let isBatch = false, pendingFiles = [], pageCache = [], currentFileName = "", currentPage = 1;
+    const targetW = 2333;
+    const statusEl = document.getElementById('status');
+
+    function setStatus(text, state = 'idle') {
+        statusEl.innerText = text;
+        statusEl.dataset.state = state;
+        statusEl.dataset.busy = state === 'busy' ? 'true' : 'false';
+    }
+
+    // --- 核心模式與交互 ---
+    document.getElementById('modeSingle').onclick = () => requestScanMode(0);
+    document.getElementById('modeBatch').onclick = () => requestScanMode(1);
+    document.getElementById('uploadTrigger').onclick = () => document.getElementById('fileInput').click();
+
+    function switchMode(batch) {
+        isBatch = batch;
+        document.getElementById("saveBtn").disabled = batch ? !pendingFiles.length : !pageCache.length;
+        document.querySelector('.mode-switch').classList.toggle('batch-active', batch);
+        document.getElementById('modeBatch').classList.toggle('active', batch);
+        document.getElementById('modeSingle').classList.toggle('active', !batch);
+        document.getElementById('batchArea').style.display = batch ? 'flex' : 'none';
+        document.getElementById('singleViewer').style.display = batch ? 'none' : 'flex';
+        document.getElementById('pageNav').style.visibility = batch ? 'hidden' : 'visible';
+        document.getElementById('pagesPanel').style.display = batch ? 'none' : 'flex';
+        document.getElementById('fileInput').multiple = batch;
+        setSaveButtonLabel(batch ? "BATCH EXECUTE" : "SAVE SINGLE");
+    }
+
+    function setSaveButtonLabel(text) {
+        document.getElementById('saveBtn').innerHTML = `<img class="kicon icon-dark" src="https://koboyo.com/icons/svg/duplicate-action.svg" alt="">${text}`;
+    }
+
+    // --- 檔案邏輯 ---
+    document.getElementById('bodyZone').ondragover = (e) => { e.preventDefault(); document.getElementById('dropOverlay').classList.add('active'); };
+    document.getElementById('bodyZone').ondragleave = () => document.getElementById('dropOverlay').classList.remove('active');
+    document.getElementById('bodyZone').ondrop = (e) => { e.preventDefault(); document.getElementById('dropOverlay').classList.remove('active'); handleFiles(e.dataTransfer.files); };
+    document.getElementById('fileInput').onchange = (e) => handleFiles(e.target.files);
+
+    async function handleFiles(files) {
+        if (!files.length) return;
+        if (!isBatch) {
+            const f = files[0]; currentFileName = f.name.replace(/\.[^/.]+$/, "");
+            setStatus('LOADING PDF...', 'busy');
+            pageCache = await pdfToImgs(f); createNav();
+        } else {
+            pendingFiles = Array.from(files).filter(f => f.type === "application/pdf");
+            document.getElementById('fileContainer').innerHTML = pendingFiles.map((f, i) => `
+                <div class="file-item" id="file-${i}">
+                    <div class="file-name"><img class="kicon" src="https://koboyo.com/icons/svg/folder-files.svg" alt=""><span>${f.name}</span></div>
+                    <span class="status-text" style="font-weight:bold; font-size:12px;">PENDING</span>
+                </div>`).join('');
+            document.getElementById('saveBtn').disabled = false;
+        }
+    }
+
+    async function pdfToImgs(file) {
+        const doc = await pdfjsLib.getDocument(await file.arrayBuffer()).promise;
+        const res = [];
+        for(let i=1; i<=doc.numPages; i++) {
+            if (!isBatch) setStatus(`RENDERING PAGE ${i} / ${doc.numPages}`, 'busy');
+            const page = await doc.getPage(i);
+            const vp = page.getViewport({scale: targetW / page.getViewport({scale:1}).width});
+            const cvs = document.createElement('canvas');
+            cvs.width = vp.width; cvs.height = vp.height;
+            await page.render({canvasContext: cvs.getContext('2d'), viewport: vp}).promise;
+            res.push({url: cvs.toDataURL('image/jpeg', 0.95), w: vp.width, h: vp.height});
+        }
+        return res;
+    }
+
+    function createNav() {
+        const nav = document.getElementById('pageNav'), thumbs = document.getElementById('pageThumbs');
+        nav.innerHTML = '<button class="p-btn page-step" id="prevPage"><img class="kicon" src="https://koboyo.com/icons/svg/back-navigation.svg" alt="">PREV</button><div class="page-status" id="pageStatus">PAGE 0 / 0</div><button class="p-btn page-step" id="nextPage">NEXT<img class="kicon" src="https://koboyo.com/icons/svg/forward-navigation.svg" alt=""></button>';
+        thumbs.innerHTML = '';
+        pageCache.forEach((page, i) => {
+            const b = document.createElement('button');
+            b.className = 'page-thumb' + (i===0?' active':'');
+            b.setAttribute('aria-label', `開啟第 ${i+1} 頁`);
+            b.innerHTML = `<img src="${page.url}" alt="第 ${i+1} 頁縮圖"><span>PAGE ${String(i+1).padStart(2, '0')}</span>`;
+            b.onclick = () => { currentPage = i+1; renderCurrent(); };
+            thumbs.appendChild(b);
+        });
+        document.getElementById('pageCount').innerText = pageCache.length;
+        document.getElementById('prevPage').onclick = () => changePage(-1);
+        document.getElementById('nextPage').onclick = () => changePage(1);
+        currentPage = 1; renderCurrent();
+        document.getElementById('saveBtn').disabled = false;
+        setStatus(`${pageCache.length} PAGE${pageCache.length===1?'':'S'} READY`, 'success');
+    }
+
+    function changePage(delta) {
+        if (!pageCache.length) return;
+        currentPage = Math.min(pageCache.length, Math.max(1, currentPage + delta));
+        renderCurrent();
+    }
+
+    function renderCurrent(preserveZoom = false) {
+        if (isBatch || !pageCache.length) return;
+        document.querySelectorAll('.page-thumb').forEach((b,i)=>b.classList.toggle('active', i+1===currentPage));
+        const activeThumb = document.querySelector('.page-thumb.active');
+        if (activeThumb) activeThumb.scrollIntoView({block:'nearest', behavior:'smooth'});
+        const pageStatus = document.getElementById('pageStatus');
+        if (pageStatus) pageStatus.innerText = `PAGE ${currentPage} / ${pageCache.length}`;
+        const prev = document.getElementById('prevPage'), next = document.getElementById('nextPage');
+        if (prev) prev.disabled = currentPage === 1;
+        if (next) next.disabled = currentPage === pageCache.length;
+        const d = pageCache[currentPage-1], img = new Image();
+        img.onload = () => {
+            const co = document.getElementById('cOrig'); co.width = d.w; co.height = d.h;
+            co.getContext('2d').drawImage(img, 0, 0);
+            applyEffect(img, d, document.getElementById('cScan'));
+            if (preserveZoom) setStatus('LIVE EFFECT ACTIVE', 'success');
+            if (!preserveZoom) requestAnimationFrame(() => {
+                resetCanvasZoom(co);
+                resetCanvasZoom(document.getElementById('cScan'));
+            });
+        };
+        img.src = d.url;
+    }
+
+    function applyEffect(img, data, target) {
+        const ctx = target.getContext('2d'), n = parseFloat(document.getElementById('noise').value), 
+              c = parseFloat(document.getElementById('contrast').value), r = parseFloat(document.getElementById('rotate').value)*(Math.PI/180);
+        target.width = data.w; target.height = data.h;
+        ctx.save();
+        ctx.fillStyle = "white"; ctx.fillRect(0,0,target.width,target.height);
+        ctx.translate(target.width/2, target.height/2); ctx.rotate(r); ctx.translate(-target.width/2, -target.height/2);
+        ctx.filter = `contrast(${c}) brightness(1.02) blur(0.4px)`;
+        ctx.drawImage(img, 0, 0); ctx.restore();
+        if(n > 0){
+            const id = ctx.getImageData(0,0,target.width,target.height), d = id.data;
+            for(let i=0; i<d.length; i+=16){ const f=(Math.random()-0.5)*n; d[i]+=f; d[i+1]+=f; d[i+2]+=f; }
+            ctx.putImageData(id,0,0);
+        }
+    }
+
+    // --- 監聽滑桿 ---
+    ['noise','contrast','rotate','qual'].forEach(id => {
+        document.getElementById(id).oninput = () => {
+            document.getElementById('v_'+id).innerText = document.getElementById(id).value;
+            if(!isBatch && id !== 'qual') {
+                setStatus('UPDATING LIVE EFFECT...', 'busy');
+                renderCurrent(true);
+            } else if (id === 'qual') {
+                setStatus('EXPORT QUALITY UPDATED', 'success');
+            }
+        };
+    });
+
+    // --- 批次處理與存檔 ---
+    document.getElementById('saveBtn').onclick = async () => {
+        const q = parseFloat(document.getElementById('qual').value);
+        if(!isBatch) {
+            const name = `${currentFileName}-scan.pdf`;
+            try {
+                document.getElementById('saveBtn').disabled = true;
+                setStatus('RENDERING OUTPUT PDF...', 'busy');
+                if (window.showSaveFilePicker) {
+                    const h = await window.showSaveFilePicker({suggestedName: name, types: [{description:'PDF Document',accept:{'application/pdf':['.pdf']}}]});
+                    const blob = await processToBlob(pageCache, q);
+                    const w = await h.createWritable(); await w.write(blob); await w.close();
+                } else {
+                    const blob = await processToBlob(pageCache, q);
+                    const url = URL.createObjectURL(blob), a = document.createElement('a');
+                    a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+                    setTimeout(() => URL.revokeObjectURL(url), 1000);
+                }
+                setStatus('PDF SAVED WITH EFFECT', 'success');
+            } catch (e) {
+                if (e.name !== 'AbortError') {
+                    console.error(e);
+                    setStatus('SAVE FAILED — CHECK DOWNLOAD PERMISSION', 'error');
+                }
+            } finally { document.getElementById('saveBtn').disabled = false; }
+        } else {
+            try {
+                const dirHandle = await window.showDirectoryPicker();
+                document.getElementById('progressWrapper').style.display = 'block';
+                document.getElementById('saveBtn').disabled = true;
+                for(let i=0; i < pendingFiles.length; i++) {
+                    const f = pendingFiles[i];
+                    const item = document.getElementById(`file-${i}`);
+                    const percent = Math.round((i / pendingFiles.length) * 100);
+                    updateBar(percent, `PROCESSING: ${f.name}`);
+                    item.querySelector('.status-text').innerText = "WORKING...";
+                    item.querySelector('.status-text').style.color = "var(--accent)";
+
+                    const imgs = await pdfToImgs(f);
+                    const blob = await processToBlob(imgs, q);
+                    const h = await dirHandle.getFileHandle(`${f.name.replace(/\.[^/.]+$/, "")}-scan.pdf`, { create: true });
+                    const w = await h.createWritable(); await w.write(blob); await w.close();
+
+                    item.classList.add('done');
+                    item.querySelector('.status-text').innerText = "SUCCESS";
+                }
+                updateBar(100, "BATCH TASK COMPLETE");
+                document.getElementById('saveBtn').disabled = false;
+            } catch (e) { console.error(e); document.getElementById('saveBtn').disabled = false; }
+        }
+    };
+
+    function updateBar(p, t) {
+        document.getElementById('progressBar').style.width = p + '%';
+        document.getElementById('currentAction').innerText = t;
+    }
+
+    async function processToBlob(imgs, quality) {
+        const pdf = new jsPDF('p', 'px');
+        const tmp = document.createElement('canvas');
+        for(let i=0; i<imgs.length; i++) {
+            const d = imgs[i], img = await new Promise(r => { const it=new Image(); it.onload=()=>r(it); it.src=d.url; });
+            applyEffect(img, d, tmp);
+            const data = tmp.toDataURL('image/jpeg', quality);
+            if(i>0) pdf.addPage([tmp.width, tmp.height], tmp.width>tmp.height?'l':'p');
+            else { pdf.deletePage(1); pdf.addPage([tmp.width, tmp.height], tmp.width>tmp.height?'l':'p'); }
+            pdf.addImage(data, 'JPEG', 0, 0, tmp.width, tmp.height, undefined, 'FAST');
+        }
+        return pdf.output('blob');
+    }
+
+    // --- 同步縮放、捲動與拖曳平移 ---
+    const zoomMeta = {
+        cOrig: { label: 'origZoom', prefix: 'ORIGINAL' },
+        cScan: { label: 'scanZoom', prefix: 'LIVE' }
+    };
+    const canvasWraps = Array.from(document.querySelectorAll('.canvas-wrapper'));
+    let syncingView = false;
+
+    function updateZoomLabel(canvas, zoom) {
+        const meta = zoomMeta[canvas.id];
+        document.getElementById(meta.label).innerText = `${meta.prefix} · ${Math.round(zoom * 100)}%`;
+    }
+
+    function resetCanvasZoom(canvas) {
+        canvas.style.width = '';
+        canvas.style.height = '';
+        canvas.style.maxWidth = '100%';
+        canvas.style.maxHeight = 'calc(100vh - 190px)';
+        canvas.dataset.zoom = '1';
+        requestAnimationFrame(() => {
+            canvas.dataset.baseWidth = String(canvas.clientWidth);
+            canvas.dataset.baseHeight = String(canvas.clientHeight);
+            updateZoomLabel(canvas, 1);
+            const wrap = canvas.closest('.canvas-wrapper');
+            wrap.scrollLeft = 0; wrap.scrollTop = 0;
+        });
+    }
+
+    function syncScrollFrom(source) {
+        if (syncingView) return;
+        syncingView = true;
+        const maxX = Math.max(0, source.scrollWidth - source.clientWidth);
+        const maxY = Math.max(0, source.scrollHeight - source.clientHeight);
+        const nx = maxX ? source.scrollLeft / maxX : 0;
+        const ny = maxY ? source.scrollTop / maxY : 0;
+        canvasWraps.forEach(target => {
+            if (target === source) return;
+            target.scrollLeft = nx * Math.max(0, target.scrollWidth - target.clientWidth);
+            target.scrollTop = ny * Math.max(0, target.scrollHeight - target.clientHeight);
+        });
+        syncingView = false;
+    }
+
+    function setSynchronizedZoom(sourceWrap, nextZoom, pointerX, pointerY) {
+        const sourceCanvas = sourceWrap.querySelector('canvas');
+        const oldZoom = parseFloat(sourceCanvas.dataset.zoom || '1');
+        const ratio = nextZoom / oldZoom;
+        canvasWraps.forEach(wrap => {
+            const canvas = wrap.querySelector('canvas');
+            const baseWidth = parseFloat(canvas.dataset.baseWidth || canvas.clientWidth);
+            const baseHeight = parseFloat(canvas.dataset.baseHeight || canvas.clientHeight);
+            const localX = wrap === sourceWrap ? pointerX : wrap.clientWidth / 2;
+            const localY = wrap === sourceWrap ? pointerY : wrap.clientHeight / 2;
+            canvas.style.maxWidth = 'none'; canvas.style.maxHeight = 'none';
+            canvas.style.width = `${baseWidth * nextZoom}px`;
+            canvas.style.height = `${baseHeight * nextZoom}px`;
+            canvas.dataset.zoom = String(nextZoom);
+            wrap.scrollLeft = (wrap.scrollLeft + localX) * ratio - localX;
+            wrap.scrollTop = (wrap.scrollTop + localY) * ratio - localY;
+            updateZoomLabel(canvas, nextZoom);
+        });
+        requestAnimationFrame(() => syncScrollFrom(sourceWrap));
+    }
+
+    canvasWraps.forEach(wrap => {
+        wrap.title = 'Ctrl + 滾輪同步縮放；按住左鍵拖曳同步移動；雙擊恢復';
+        wrap.addEventListener('wheel', e => {
+            if (!e.ctrlKey) return;
+            e.preventDefault();
+            const canvas = wrap.querySelector('canvas');
+            if (!canvas || !canvas.width) return;
+            const oldZoom = parseFloat(canvas.dataset.zoom || '1');
+            const nextZoom = Math.min(16, Math.max(.25, Math.round(oldZoom * Math.exp(-e.deltaY * .002) * 20) / 20));
+            if (nextZoom === oldZoom) return;
+            const rect = wrap.getBoundingClientRect();
+            setSynchronizedZoom(wrap, nextZoom, e.clientX - rect.left, e.clientY - rect.top);
+        }, { passive: false });
+
+        wrap.addEventListener('scroll', () => syncScrollFrom(wrap), { passive: true });
+
+        wrap.addEventListener('pointerdown', e => {
+            if (e.button !== 0 || !wrap.querySelector('canvas').width) return;
+            e.preventDefault();
+            wrap.classList.add('dragging');
+            wrap.setPointerCapture(e.pointerId);
+            const startX = e.clientX, startY = e.clientY;
+            const startLeft = wrap.scrollLeft, startTop = wrap.scrollTop;
+            const move = ev => {
+                wrap.scrollLeft = startLeft - (ev.clientX - startX);
+                wrap.scrollTop = startTop - (ev.clientY - startY);
+                syncScrollFrom(wrap);
+            };
+            const end = () => {
+                wrap.classList.remove('dragging');
+                wrap.removeEventListener('pointermove', move);
+                wrap.removeEventListener('pointerup', end);
+                wrap.removeEventListener('pointercancel', end);
+            };
+            wrap.addEventListener('pointermove', move);
+            wrap.addEventListener('pointerup', end);
+            wrap.addEventListener('pointercancel', end);
+        });
+
+        wrap.addEventListener('dblclick', () => {
+            canvasWraps.forEach(item => {
+                const canvas = item.querySelector('canvas');
+                if (canvas && canvas.width) resetCanvasZoom(canvas);
+            });
+        });
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.defaultPrevented || document.activeElement.closest('#scan-hero') || isBatch || !pageCache.length || /INPUT|BUTTON/.test(document.activeElement.tagName)) return;
+        if (e.key === 'ArrowLeft' || e.key === 'PageUp') changePage(-1);
+        if (e.key === 'ArrowRight' || e.key === 'PageDown') changePage(1);
+    });
+
+    const statusNode = document.getElementById('status');
+    const statusObserver = new MutationObserver(() => {
+        const text = statusNode.innerText || '';
+        statusNode.dataset.busy = /LOADING|RENDERING|UPDATING|PROCESSING|INITIALIZING/.test(text) ? 'true' : 'false';
+        statusNode.dataset.state = /SAVED|READY|SUCCESS|COMPLETE/.test(text) ? 'success' : /FAILED|ERROR/.test(text) ? 'error' : '';
+    });
+    statusObserver.observe(statusNode, { childList:true, characterData:true, subtree:true });
+
+    // Session navigation shares the existing processing engine and keeps its parameters intact.
+    const scanHero=document.getElementById('scan-hero'),scanTrack=document.getElementById('scan-track'),scanCards=[...scanTrack.children],scanWorkspace=document.getElementById('scan-workspace');
+    let scanIndex=0,scanTransition,scanArrival;
+    const scanReduced=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
+    function renderScanWheel(){scanTrack.style.transform='rotate('+(-scanIndex*7.5)+'deg)';document.getElementById('scan-number').textContent='0'+(scanIndex+1);document.getElementById('scan-meta').textContent=scanIndex?'02 | 批次處理':'01 | 單檔調整';document.getElementById('scan-bar').style.width=(scanIndex+1)*50+'%';document.getElementById('scan-progress').setAttribute('aria-valuenow',scanIndex+1);document.getElementById('scan-prev').disabled=scanIndex===0;document.getElementById('scan-next').disabled=scanIndex===1;scanCards.forEach((card,i)=>{card.tabIndex=i===scanIndex?0:-1;card.setAttribute('aria-current',String(i===scanIndex))})}
+    function requestScanMode(index,navigate=false){
+      if(statusEl.dataset.busy==='true')return;
+      scanIndex=Math.max(0,Math.min(1,index));renderScanWheel();clearTimeout(scanTransition);clearTimeout(scanArrival);
+      scanWorkspace.classList.remove('arriving');scanWorkspace.classList.add('leaving');scanWorkspace.inert=true;scanWorkspace.setAttribute('aria-busy','true');
+      scanTransition=setTimeout(()=>{switchMode(scanIndex===1);document.getElementById('scan-title').textContent=scanIndex?'批次處理':'單檔調整';scanWorkspace.classList.remove('leaving');scanWorkspace.classList.add('arriving');scanWorkspace.inert=false;scanWorkspace.removeAttribute('aria-busy');scanArrival=setTimeout(()=>scanWorkspace.classList.remove('arriving'),450);if(navigate){const section=document.getElementById('scan-session');section.focus({preventScroll:true});section.scrollIntoView({behavior:scanReduced()?'instant':'smooth'})}},scanReduced()?0:180);
+    }
+    scanCards.forEach((card,i)=>{card.style.transform='rotate('+i*7.5+'deg) translateY(-3375px)';card.onclick=e=>{e.preventDefault();requestScanMode(i,true)}});
+    document.getElementById('scan-prev').onclick=()=>requestScanMode(scanIndex-1);document.getElementById('scan-next').onclick=()=>requestScanMode(scanIndex+1);
+    document.getElementById('scan-open').onclick=e=>{e.preventDefault();requestScanMode(scanIndex,true)};
+    document.querySelector('.scan-back').onclick=e=>{e.preventDefault();scanCards[scanIndex].focus({preventScroll:true});scanHero.scrollIntoView({behavior:scanReduced()?'instant':'smooth'})};
+    scanHero.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();requestScanMode(e.key==='Home'?0:e.key==='End'?1:scanIndex+(e.key==='ArrowRight'?1:-1));scanCards[scanIndex].focus({preventScroll:true})});
+    function fitScanWheel(){const scale=Math.min(scanHero.clientWidth/1920,scanHero.clientHeight/1080);scanHero.style.setProperty('--s',scale);scanHero.style.setProperty('--cy',(scanHero.clientHeight*.72+3375*scale)+'px')}
+    new ResizeObserver(fitScanWheel).observe(scanHero);fitScanWheel();renderScanWheel();
+
+    switchMode(false);
+</script>
+</body>
+</html>
