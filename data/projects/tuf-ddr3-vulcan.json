@@ -4,9 +4,10 @@
   "title": "TUF Vulcan",
   "brand": "TeamGroup",
   "hero": {
-    "image": "",
+    "image": "../assets/images/teamgroup/TUF_VALCUN_01.jpg",
     "alt": "TUF DDR3 Vulcan 產品主視覺",
-    "visible": false
+    "visible": true,
+    "ratio": "auto"
   },
   "overview": {
     "company": "TeamGroup",
@@ -24,14 +25,6 @@
   },
   "brief": [],
   "gallery": [
-    {
-      "image": "../assets/images/teamgroup/TUF_VALCUN_01.jpg",
-      "title": "",
-      "description": "",
-      "ratio": "4:3",
-      "width": "half",
-      "visible": true
-    },
     {
       "image": "../assets/images/teamgroup/TUF_vulcan.png",
       "title": "",

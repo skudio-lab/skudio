@@ -120,6 +120,8 @@ a { color: inherit; }
 /* Industrial Design */
 .id-overview { min-height: 100svh; padding: 24px clamp(20px, 4vw, 68px) 56px; row-gap: 0; }
 .id-overview__image { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+#id-portfolio [data-slot="id-hero"] { aspect-ratio: auto; }
+#id-portfolio [data-slot="id-hero"] img { height: auto; object-fit: contain; }
 .ai-overview .id-overview__image,
 .pkg-overview .id-overview__image { aspect-ratio: auto; }
 .id-overview__image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
@@ -287,6 +289,9 @@ a { color: inherit; }
 .project-hero__meta { grid-column: 10 / -1; align-self: end; }
 .project-hero__image { grid-column: 1 / -1; aspect-ratio: 16 / 9; margin-top: 20px; }
 .project-hero__image img { width: 100%; height: 100%; object-fit: cover; }
+.project-hero__image[hidden] { display: none !important; }
+.project-hero__image--auto { aspect-ratio: auto; }
+.project-hero__image--auto img { display: block; width: 100%; height: auto; object-fit: contain; }
 .project-section { padding: clamp(56px, 8vw, 120px) clamp(20px, 4vw, 68px); border-top: 1px solid var(--rule); row-gap: 30px; }
 .project-section__heading { grid-column: 1 / span 3; }
 .project-section__heading h2 { margin: 0; font-size: clamp(2.4rem, 4.5vw, 4.8rem); line-height: .9; letter-spacing: -.05em; }

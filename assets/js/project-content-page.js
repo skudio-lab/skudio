@@ -96,6 +96,7 @@
     const target = document.querySelector("[data-hero-image]");
     target.hidden = hero?.visible === false;
     if (target.hidden) return;
+    target.classList.toggle('project-hero__image--auto', hero?.ratio === 'auto');
     const media = createMedia(hero || {}, "HERO IMAGE");
     target.replaceChildren(...media.childNodes);
     target.setAttribute("aria-label", hero?.alt || "產品主視覺");
