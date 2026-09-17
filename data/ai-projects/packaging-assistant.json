@@ -90,9 +90,9 @@
     }
   ],
   "application": {
-    "enabled": true,
+    "enabled": false,
     "label": "Open Application",
-    "url": "../apps/packaging-assistant/index.html",
+    "url": "",
     "openInNewTab": true
   },
   "navigation": {
