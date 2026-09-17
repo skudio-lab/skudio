@@ -30,32 +30,32 @@
   ],
   "development": [
     {
-      "image": "jiejia_01.png",
+      "image": "JieJia_01.png",
       "title": "",
       "description": "",
       "visible": true
     },
     {
-      "image": "jiejia_02.png",
+      "image": "JieJia_02.png",
       "title": "",
       "description": "",
       "visible": true
     },
     {
-      "image": "jiejia_03.png",
+      "image": "JieJia_03.png",
       "title": "",
       "description": "",
       "visible": true
     },
     {
-      "image": "jiejia_04.png",
+      "image": "JieJia_04.png",
       "title": "",
       "description": "",
       "visible": true
     }
   ],
   "finalLogo": {
-    "image": "jiejia_04.png"
+    "image": "JieJia_04.png"
   },
   "applications": [
     {
