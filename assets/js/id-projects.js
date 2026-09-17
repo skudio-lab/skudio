@@ -4,9 +4,9 @@ window.ID_PROJECTS = [
   { slug: "sb8200", sequence: "03", brand: "CBN", title: "SB8200", category: "Industrial Design", year: "—", role: "Industrial Design", archiveImage: "1200 × 1200 px" },
   { slug: "mf4322", sequence: "04", brand: "CBN", title: "MF4322", category: "Industrial Design", year: "—", role: "Industrial Design", archiveImage: "1600 × 1200 px" },
   { slug: "nvg653ux", sequence: "05", brand: "CBN", title: "NVG653UX", category: "Networking / Gateway", year: "—", role: "Industrial Design", archiveImage: "1600 × 900 px" },
-  { slug: "rgb-ssd", sequence: "06", brand: "TeamGroup", title: "DELTA RGB SSD", category: "Storage & Gaming", year: "—", role: "Industrial Design" },
-  { slug: "t195-usb", sequence: "07", brand: "TeamGroup", title: "T183 TOOL USB", category: "Storage & Gaming", year: "—", role: "Industrial Design" },
-  { slug: "tuf-ddr3-vulcan", sequence: "08", brand: "TeamGroup", title: "TUF Vulcan", category: "Storage & Gaming", year: "—", role: "Industrial Design" },
+  { slug: "rgb-ssd", sequence: "06", brand: "TeamGroup", title: "DELTA RGB SSD", category: "Storage & Gaming", year: "2018", role: "Industrial Design" },
+  { slug: "t183-usb", sequence: "07", brand: "TeamGroup", title: "T183 TOOL USB", category: "Storage & Gaming", year: "2019", role: "Industrial Design" },
+  { slug: "tuf-ddr3-vulcan", sequence: "08", brand: "TeamGroup", title: "TUF Vulcan", category: "Storage & Gaming", year: "2019", role: "Industrial Design" },
   { slug: "teamgroup", sequence: "09", brand: "TeamGroup", title: "Concept Gallery", category: "Concept Design", year: "—", role: "Industrial Design" },
-  { slug: "ins3", sequence: "10", brand: "Tekspring", title: "INS3", category: "Document Camera", year: "—", role: "Industrial Design", archiveImage: "1600 × 900 px" }
+  { slug: "ins3", sequence: "10", brand: "Tekspring", title: "INS3", category: "Document Camera", year: "2020", role: "Industrial Design", archiveImage: "1600 × 900 px" }
 ];

@@ -46,6 +46,9 @@ a { color: inherit; }
   text-decoration: none;
 }
 .rail-nav { display: flex; flex-direction: column; align-items: center; gap: 30px; }
+.rail-mark:has(img) { width: 44px; height: 44px; background: transparent; }
+.rail-mark img { display: block; width: 30px; height: 42px; object-fit: contain; }
+.rail-mark:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
 .rail-nav a {
   color: var(--muted);
   font-size: .66rem;
@@ -122,9 +125,11 @@ a { color: inherit; }
 .id-overview__image { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
 #id-portfolio [data-slot="id-hero"] { aspect-ratio: auto; }
 #id-portfolio [data-slot="id-hero"] img { height: auto; object-fit: contain; }
+.vi-overview .id-overview__image,
 .ai-overview .id-overview__image,
 .pkg-overview .id-overview__image { aspect-ratio: auto; }
 .id-overview__image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.vi-overview .id-overview__image img,
 .ai-overview .id-overview__image img,
 .pkg-overview .id-overview__image img { height: auto; object-fit: contain; }
 .id-overview__title { grid-column: 1 / span 7; padding-top: 28px; }
@@ -312,8 +317,8 @@ a { color: inherit; }
 .project-gallery-item--auto:nth-child(3n + 1) { grid-column: 1 / -1; }
 .project-gallery-item .project-media { overflow: hidden; }
 .project-gallery-item .project-media img { width: 100%; height: 100%; object-fit: cover; }
-body:is([data-project="teamgroup"], [data-project="rgb-ssd"], [data-project="t195-usb"], [data-project="tuf-ddr3-vulcan"]) .project-media { background: var(--paper); isolation: isolate; }
-body:is([data-project="teamgroup"], [data-project="rgb-ssd"], [data-project="t195-usb"], [data-project="tuf-ddr3-vulcan"]) .project-media img { display: block; object-fit: contain; object-position: center center; mix-blend-mode: multiply; }
+body:is([data-project="teamgroup"], [data-project="rgb-ssd"], [data-project="t183-usb"], [data-project="tuf-ddr3-vulcan"]) .project-media { background: var(--paper); isolation: isolate; }
+body:is([data-project="teamgroup"], [data-project="rgb-ssd"], [data-project="t183-usb"], [data-project="tuf-ddr3-vulcan"]) .project-media img { display: block; object-fit: contain; object-position: center center; mix-blend-mode: multiply; }
 .project-gallery-item .project-media[style*="auto"] img { height: auto; }
 .project-gallery-caption { display: grid; grid-template-columns: 48px 1fr; gap: 6px var(--gutter); padding-top: 14px; }
 .project-gallery-caption p { grid-column: 2; }
